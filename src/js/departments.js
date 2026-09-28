@@ -36,6 +36,7 @@
         cse: 'Computer Science and Engineering',
         mech: 'Mechanical Engineering',
         biotech: 'Biotechnology',
+        'bio-technology': 'Biotechnology',
         maths: 'Mathematics'
     };
 

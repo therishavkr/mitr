@@ -16,6 +16,7 @@ export default defineConfig({
         emergency: resolve(__dirname, 'emergency.html'),
         directory: resolve(__dirname, 'directory.html'),
         yearbook: resolve(__dirname, 'yearbook.html'),
+        faculty: resolve(__dirname, 'pages/faculty-directory.html'),
       },
     },
   },

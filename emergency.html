@@ -4,124 +4,17 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Emergency Support | IITM MITR</title>
-<link rel="icon" href="favicon.ico" sizes="any"/>
-<link rel="icon" href="favicon.png" type="image/png"/>
-<link rel="apple-touch-icon" href="favicon.png"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="icon" href="assets/brand/favicon.ico" sizes="any"/>
+<link rel="icon" href="assets/brand/favicon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="assets/brand/favicon.png"/>
+<link rel="stylesheet" href="src/css/tailwind.min.css">
+<link rel="stylesheet" href="src/css/mitr-ui.css">
+<link rel="stylesheet" href="src/css/emergency-page.css">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&amp;family=Work+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <!-- Tailwind Config Verbatim -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "inverse-surface": "#313030",
-                    "inverse-on-surface": "#f3f0ef",
-                    "on-surface": "#1c1b1b",
-                    "on-surface-variant": "#504539",
-                    "primary-fixed": "#ffddb8",
-                    "tertiary-fixed-dim": "#c9c6c2",
-                    "on-secondary-container": "#741818",
-                    "on-primary-container": "#482b00",
-                    "error-container": "#ffdad6",
-                    "surface": "#fcf9f8",
-                    "on-secondary": "#ffffff",
-                    "on-primary-fixed": "#2b1700",
-                    "surface-container": "#f0eded",
-                    "outline-variant": "#d4c4b4",
-                    "tertiary-container": "#9b9995",
-                    "surface-container-high": "#eae7e7",
-                    "on-secondary-fixed-variant": "#842322",
-                    "error": "#ba1a1a",
-                    "on-primary": "#ffffff",
-                    "surface-container-highest": "#e5e2e1",
-                    "primary": "#815518",
-                    "on-error-container": "#93000a",
-                    "primary-container": "#c48f4d",
-                    "surface-variant": "#e5e2e1",
-                    "surface-tint": "#815518",
-                    "secondary-container": "#ff8078",
-                    "background": "#fcf9f8",
-                    "surface-dim": "#dcd9d9",
-                    "surface-container-low": "#f6f3f2",
-                    "surface-bright": "#fcf9f8",
-                    "outline": "#827567",
-                    "on-tertiary-fixed": "#1c1c19",
-                    "secondary": "#a43b37",
-                    "on-tertiary-container": "#32312f",
-                    "on-secondary-fixed": "#410004",
-                    "on-tertiary-fixed-variant": "#484744",
-                    "on-primary-fixed-variant": "#653e00",
-                    "on-error": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "tertiary": "#605e5b",
-                    "secondary-fixed-dim": "#ffb3ad",
-                    "on-tertiary": "#ffffff",
-                    "secondary-fixed": "#ffdad7",
-                    "inverse-primary": "#f6bc75",
-                    "on-background": "#1c1b1b",
-                    "tertiary-fixed": "#e6e2de",
-                    "primary-fixed-dim": "#f6bc75"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "margin-mobile": "1.5rem",
-                    "section-gap": "clamp(3rem, 8vw, 8rem)",
-                    "margin-page": "clamp(1rem, 5vw, 4rem)",
-                    "gutter": "clamp(1.25rem, 3vw, 2rem)"
-            },
-            "fontFamily": {
-                    "headline-lg-mobile": ["Newsreader"],
-                    "body-lg": ["Work Sans"],
-                    "headline-xl": ["Newsreader"],
-                    "label-sm": ["Work Sans"],
-                    "headline-lg": ["Newsreader"],
-                    "body-md": ["Work Sans"]
-            },
-            "fontSize": {
-                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-xl": ["48px", {"lineHeight": "1.1", "fontWeight": "600"}],
-                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
-    </script>
-<style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(129, 85, 24, 0.1);
-        }
-        
-        .campus-divider {
-            height: 80px;
-            width: 100%;
-            background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); /* Fallback pattern */
-            mask-image: linear-gradient(to right, transparent, black, transparent);
-            opacity: 0.1;
-        }
 
-        .hero-gradient {
-            background: linear-gradient(135deg, #815518 0%, #c48f4d 100%);
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
 </head>
 <body class="bg-background text-on-surface font-body-md selection:bg-primary/20">
 <!-- TopNavBar -->
@@ -206,7 +99,11 @@
 <div class="flex items-center gap-1.5 text-secondary font-bold text-sm mb-6"><span class="material-symbols-outlined text-base">encrypted</span><span>Confidential</span></div>
 </div>
 <div class="flex flex-wrap gap-3">
-<button type="button" class="contact-trigger flex-1 flex items-center justify-center space-x-2 bg-primary text-white px-4 py-2 rounded font-bold hover:opacity-90 active:scale-95 transition-all" data-type="phone" data-label="Wellness Centre" data-values="044 2257 8521,044 2257 8522,044 2257 8523,044 2257 8524,044 2257 8527,9498665101">
+<a href="../admin/wellness/index.php" class="flex-1 flex items-center justify-center space-x-2 bg-primary text-white px-4 py-2 rounded font-bold hover:opacity-90 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-sm">calendar_month</span>
+<span>Book Appointment</span>
+</a>
+<button type="button" class="contact-trigger flex-1 flex items-center justify-center space-x-2 border border-secondary text-secondary px-4 py-2 rounded font-bold hover:bg-secondary/5 transition-all" data-type="phone" data-label="Wellness Centre" data-values="044 2257 8521,044 2257 8522,044 2257 8523,044 2257 8524,044 2257 8527,9498665101">
 <span class="material-symbols-outlined text-sm">call</span>
 <span>Call</span>
 </button>
@@ -285,7 +182,7 @@ Where to Find Us
 <!-- Location: Institute Hospital -->
 <div class="glass-card rounded-xl p-5 flex flex-col hover:shadow-lg transition-all duration-300">
 <h3 class="font-headline-lg text-xl text-on-surface mb-4">Institute Hospital</h3>
-<a class="relative block w-full h-40 rounded-lg overflow-hidden border border-outline-variant/30 group/map mb-5" href="https://www.google.com/maps/search/?api=1&amp;query=IIT%20Madras%20Institute%20Hospital" target="_blank" rel="noopener" aria-label="Open Institute Hospital location in Google Maps">
+<a class="relative block w-full h-40 rounded-lg overflow-hidden border border-outline-variant/30 group/map mb-5" href="https://www.google.com/maps/search/?api=1&amp;query=IIT%20Madras%20Institute%20Hospital" target="_blank" rel="noopener noreferrer" aria-label="Open Institute Hospital location in Google Maps">
 <iframe class="w-full h-full pointer-events-none" src="https://maps.google.com/maps?q=IIT%20Madras%20Institute%20Hospital&amp;z=16&amp;output=embed" loading="lazy" title="Map - Institute Hospital"></iframe>
 <span class="absolute inset-0 bg-primary/0 group-hover/map:bg-primary/20 transition-colors flex items-center justify-center">
 <span class="material-symbols-outlined text-white text-base opacity-0 group-hover/map:opacity-100 transition-opacity">open_in_new</span>
@@ -320,7 +217,7 @@ Chennai, Tamil Nadu 600036
 <!-- Location: Your DOST -->
 <div class="glass-card rounded-xl p-5 flex flex-col hover:shadow-lg transition-all duration-300">
 <h3 class="font-headline-lg text-xl text-on-surface mb-4">Your DOST</h3>
-<a class="relative block w-full h-40 rounded-lg overflow-hidden border border-outline-variant/30 group/map mb-5" href="https://www.google.com/maps/search/?api=1&amp;query=Central%20Library%20IIT%20Madras" target="_blank" rel="noopener" aria-label="Open Your DOST location in Google Maps">
+<a class="relative block w-full h-40 rounded-lg overflow-hidden border border-outline-variant/30 group/map mb-5" href="https://www.google.com/maps/search/?api=1&amp;query=Central%20Library%20IIT%20Madras" target="_blank" rel="noopener noreferrer" aria-label="Open Your DOST location in Google Maps">
 <iframe class="w-full h-full pointer-events-none" src="https://maps.google.com/maps?q=Central%20Library%20IIT%20Madras&amp;z=16&amp;output=embed" loading="lazy" title="Map - Your DOST"></iframe>
 <span class="absolute inset-0 bg-primary/0 group-hover/map:bg-primary/20 transition-colors flex items-center justify-center">
 <span class="material-symbols-outlined text-white text-base opacity-0 group-hover/map:opacity-100 transition-opacity">open_in_new</span>
@@ -355,7 +252,7 @@ Chennai, Tamil Nadu 600036
 <!-- Location: Wellness Centre -->
 <div class="glass-card rounded-xl p-5 flex flex-col hover:shadow-lg transition-all duration-300">
 <h3 class="font-headline-lg text-xl text-on-surface mb-4">Wellness Centre</h3>
-<a class="relative block w-full h-40 rounded-lg overflow-hidden border border-outline-variant/30 group/map mb-5" href="https://www.google.com/maps/search/?api=1&amp;query=DoSt%20Office%20Dean%20of%20Students%20IIT%20Madras" target="_blank" rel="noopener" aria-label="Open Wellness Centre location in Google Maps">
+<a class="relative block w-full h-40 rounded-lg overflow-hidden border border-outline-variant/30 group/map mb-5" href="https://www.google.com/maps/search/?api=1&amp;query=DoSt%20Office%20Dean%20of%20Students%20IIT%20Madras" target="_blank" rel="noopener noreferrer" aria-label="Open Wellness Centre location in Google Maps">
 <iframe class="w-full h-full pointer-events-none" src="https://maps.google.com/maps?q=DoSt%20Office%20Dean%20of%20Students%20IIT%20Madras&amp;z=16&amp;output=embed" loading="lazy" title="Map - Wellness Centre"></iframe>
 <span class="absolute inset-0 bg-primary/0 group-hover/map:bg-primary/20 transition-colors flex items-center justify-center">
 <span class="material-symbols-outlined text-white text-base opacity-0 group-hover/map:opacity-100 transition-opacity">open_in_new</span>
@@ -409,151 +306,12 @@ Chennai, Tamil Nadu 600036
 <div class="space-y-2" id="contact-popover-body"></div>
 </div>
 
+    
 
-<script>
-        // Simple micro-interaction for glass cards
-        document.querySelectorAll('.glass-card').forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-4px)';
-            });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
-        });
-
-        // Sticky Navbar effect on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 20) {
-                nav.classList.add('shadow-md', 'h-16');
-                nav.classList.remove('h-20');
-            } else {
-                nav.classList.remove('shadow-md', 'h-16');
-                nav.classList.add('h-20');
-            }
-        });
-    </script>
-    <script>
-        // ---- Shared Call/Email popover ----
-        (function () {
-            var popover = document.getElementById('contact-popover');
-            var labelEl = document.getElementById('contact-popover-label');
-            var bodyEl = document.getElementById('contact-popover-body');
-            var closeBtn = document.getElementById('contact-popover-close');
-
-            function isMobileDevice() {
-                var coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
-                var uaMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-                return !!(coarse && uaMobile);
-            }
-
-            function flashCopied(btn) {
-                var original = btn.dataset.originalLabel || btn.textContent;
-                btn.dataset.originalLabel = original;
-                btn.textContent = 'Copied!';
-                setTimeout(function () { btn.textContent = original; }, 1500);
-            }
-
-            function copyToClipboard(text, btn) {
-                if (navigator.clipboard && navigator.clipboard.writeText) {
-                    navigator.clipboard.writeText(text).then(function () { flashCopied(btn); });
-                } else {
-                    var ta = document.createElement('textarea');
-                    ta.value = text;
-                    ta.style.position = 'fixed';
-                    ta.style.opacity = '0';
-                    document.body.appendChild(ta);
-                    ta.select();
-                    try { document.execCommand('copy'); } catch (e) { /* no-op fallback */ }
-                    document.body.removeChild(ta);
-                    flashCopied(btn);
-                }
-            }
-
-            function buildRow(value, type) {
-                var row = document.createElement('div');
-                row.className = 'flex items-center justify-between gap-3 bg-surface-container rounded px-3 py-2';
-
-                // The value itself is the primary action on every device:
-                // tel: dials, mailto: opens the visitor's mail client.
-                var link = document.createElement('a');
-                link.href = type === 'phone'
-                    ? 'tel:' + value.replace(/[^+\d]/g, '')
-                    : 'mailto:' + value;
-                link.className = 'text-sm text-primary font-bold truncate hover:underline';
-                link.textContent = value;
-                link.setAttribute('aria-label', (type === 'phone' ? 'Call ' : 'Email ') + value);
-                row.appendChild(link);
-
-                var btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = 'font-body-md text-xs font-bold text-primary border border-primary/40 rounded px-2 py-1 hover:bg-primary/10 shrink-0';
-                btn.textContent = 'Copy';
-                btn.addEventListener('click', function () { copyToClipboard(value, btn); });
-                row.appendChild(btn);
-
-                return row;
-            }
-
-            function positionPopover(trigger) {
-                var rect = trigger.getBoundingClientRect();
-                var popRect = popover.getBoundingClientRect();
-
-                var left = rect.left;
-                var maxLeft = document.documentElement.clientWidth - popRect.width - 16;
-                left = Math.min(left, maxLeft);
-                left = Math.max(left, 16);
-
-                var top = rect.bottom + 8;
-                if (top + popRect.height > window.innerHeight) {
-                    top = rect.top - popRect.height - 8;
-                }
-                top = Math.max(top, 16);
-
-                popover.style.left = left + 'px';
-                popover.style.top = top + 'px';
-            }
-
-            function openPopover(trigger) {
-                var type = trigger.dataset.type;
-                var label = trigger.dataset.label;
-                var values = trigger.dataset.values.split(',').map(function (v) { return v.trim(); });
-
-                labelEl.textContent = label + (type === 'phone' ? ' — Phone' : ' — Email');
-                bodyEl.innerHTML = '';
-                values.forEach(function (v) { bodyEl.appendChild(buildRow(v, type)); });
-
-                popover.classList.remove('hidden');
-                positionPopover(trigger);
-            }
-
-            document.addEventListener('click', function (e) {
-                var trigger = e.target.closest ? e.target.closest('.contact-trigger') : null;
-                if (trigger) {
-                    e.preventDefault();
-                    var values = trigger.dataset.values.split(',').map(function (v) { return v.trim(); });
-                    if (trigger.dataset.type === 'phone' && isMobileDevice() && values.length === 1) {
-                        window.location.href = 'tel:' + values[0].replace(/[^+\d]/g, '');
-                        return;
-                    }
-                    openPopover(trigger);
-                    return;
-                }
-                if (!popover.classList.contains('hidden') && !popover.contains(e.target)) {
-                    popover.classList.add('hidden');
-                }
-            });
-
-            closeBtn.addEventListener('click', function () { popover.classList.add('hidden'); });
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') popover.classList.add('hidden');
-            });
-            window.addEventListener('scroll', function () { popover.classList.add('hidden'); }, true);
-        })();
-
-    </script>
-<script src="site-chrome.js"></script>
-<script src="feedback.js"></script>
-<script src="booking.js"></script>
-<script src="coffee.js"></script>
+<script src="src/js/site-chrome.js"></script>
+<script src="src/js/submit-form.js"></script>
+<script src="src/js/emergency-page.js"></script>
+<script src="src/js/feedback.js"></script>
+<script src="src/js/booking.js"></script>
+<script src="src/js/coffee.js"></script>
 </body></html>

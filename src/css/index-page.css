@@ -1,0 +1,140 @@
+.glass {
+        background: rgba(252, 249, 248, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(129, 85, 24, 0.1);
+      }
+
+      /* Home hero: keep the photo readable without a full-bleed black veil
+         under the header or behind the overlapping quick-access cards. */
+      body.mitr-home #main-header {
+        background-color: rgb(252, 249, 248);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+
+      .mitr-hero-photo {
+        mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, transparent 100%);
+      }
+
+      .mitr-hero-veil {
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0,
+          rgba(0, 0, 0, 0.08) 5rem,
+          rgba(0, 0, 0, 0.42) 11rem,
+          rgba(0, 0, 0, 0.42) 62%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        pointer-events: none;
+      }
+
+      .mitr-quick-tile.glass {
+        background: rgb(252, 249, 248);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+      .glass-dark {
+        background: rgba(49, 48, 48, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .campus-divider {
+        mask-image: linear-gradient(
+          to right,
+          transparent,
+          black 15%,
+          black 85%,
+          transparent
+        );
+        opacity: 0.15;
+      }
+      .glow-hover:hover {
+        box-shadow: 0 0 20px rgba(196, 143, 77, 0.15);
+      }
+      .glass-panel {
+        background: rgba(252, 249, 248, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(129, 85, 24, 0.15);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .gold-glow {
+        box-shadow: 0 10px 30px -10px rgba(196, 143, 77, 0.15);
+      }
+      .team-card-hover:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 35px -10px rgba(129, 85, 24, 0.25);
+      }
+      .team-card-hover img {
+        transition: transform 0.5s ease;
+      }
+      .team-card-hover:hover img {
+        transform: scale(1.1);
+      }
+      .team-email {
+        display: block;
+        margin-top: 0.35rem;
+        font-size: 0.75rem;
+        line-height: 1.35;
+        color: #6d5c4d;
+        word-break: break-word;
+        text-decoration: none;
+      }
+      .team-email:hover {
+        color: #6b4f2a;
+        text-decoration: underline;
+      }
+
+      /* Keep these two sections close to the content above them.
+         py-section-gap / mb-section-gap stack up to ~16rem of empty space. */
+      .mitr-impact {
+        padding-top: 4rem;
+        padding-bottom: 3.5rem;
+        margin-bottom: 0;
+      }
+      .mitr-structure {
+        padding-top: 2rem;
+        padding-bottom: 1.5rem;
+      }
+      .mitr-about {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+      }
+      .mitr-message-body p:not(.font-bold) {
+        text-align: justify;
+        text-justify: inter-word;
+        hyphens: auto;
+      }
+      .mitr-org-chart {
+        display: block;
+        margin-top: 0;
+      }
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal-on-scroll,
+        .animate-fade-in-up {
+          animation: none !important;
+          transition: none !important;
+          transform: none !important;
+          opacity: 1 !important;
+        }
+      }

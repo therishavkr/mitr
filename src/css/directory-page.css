@@ -1,0 +1,10 @@
+.glass-panel {
+        background: rgba(252, 249, 248, 0.85);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(212, 196, 180, 0.4);
+      }
+      .gold-glow {
+        box-shadow: 0 10px 30px -10px rgba(129, 85, 24, 0.15);
+      }
+      .font-headline-lg { font-family: 'Newsreader', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.2; }
+      .font-body-md { font-family: 'Work Sans', sans-serif; font-size: 1rem; }

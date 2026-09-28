@@ -4,244 +4,16 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>MITR Gallery & Student Experiences | IITM MITR Wellness Portal</title>
-<link rel="icon" href="favicon.ico" sizes="any"/>
-<link rel="icon" href="favicon.png" type="image/png"/>
-<link rel="apple-touch-icon" href="favicon.png"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="icon" href="assets/brand/favicon.ico" sizes="any"/>
+<link rel="icon" href="assets/brand/favicon.png" type="image/png"/>
+<link rel="apple-touch-icon" href="assets/brand/favicon.png"/>
+<link rel="stylesheet" href="src/css/tailwind.min.css">
+<link rel="stylesheet" href="src/css/mitr-ui.css">
+<link rel="stylesheet" href="src/css/yearbook-page.css">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<!-- Tailwind Configuration -->
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "inverse-surface": "#313030",
-                    "inverse-on-surface": "#f3f0ef",
-                    "on-surface": "#1c1b1b",
-                    "on-surface-variant": "#504539",
-                    "primary-fixed": "#ffddb8",
-                    "tertiary-fixed-dim": "#c9c6c2",
-                    "on-secondary-container": "#741818",
-                    "on-primary-container": "#482b00",
-                    "error-container": "#ffdad6",
-                    "surface": "#fcf9f8",
-                    "on-secondary": "#ffffff",
-                    "on-primary-fixed": "#2b1700",
-                    "surface-container": "#f0eded",
-                    "outline-variant": "#d4c4b4",
-                    "tertiary-container": "#9b9995",
-                    "surface-container-high": "#eae7e7",
-                    "on-secondary-fixed-variant": "#842322",
-                    "error": "#ba1a1a",
-                    "on-primary": "#ffffff",
-                    "surface-container-highest": "#e5e2e1",
-                    "primary": "#815518",
-                    "on-error-container": "#93000a",
-                    "primary-container": "#c48f4d",
-                    "surface-variant": "#e5e2e1",
-                    "surface-tint": "#815518",
-                    "secondary-container": "#ff8078",
-                    "background": "#fcf9f8",
-                    "surface-dim": "#dcd9d9",
-                    "surface-container-low": "#f6f3f2",
-                    "surface-bright": "#fcf9f8",
-                    "outline": "#827567",
-                    "on-tertiary-fixed": "#1c1c19",
-                    "secondary": "#a43b37",
-                    "on-tertiary-container": "#32312f",
-                    "on-secondary-fixed": "#410004",
-                    "on-tertiary-fixed-variant": "#484744",
-                    "on-primary-fixed-variant": "#653e00",
-                    "on-error": "#ffffff",
-                    "surface-container-lowest": "#ffffff",
-                    "tertiary": "#605e5b",
-                    "secondary-fixed-dim": "#ffb3ad",
-                    "on-tertiary": "#ffffff",
-                    "secondary-fixed": "#ffdad7",
-                    "inverse-primary": "#f6bc75",
-                    "on-background": "#1c1b1b",
-                    "tertiary-fixed": "#e6e2de",
-                    "primary-fixed-dim": "#f6bc75"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.125rem",
-                    "lg": "0.25rem",
-                    "xl": "0.5rem",
-                    "full": "0.75rem"
-            },
-            "spacing": {
-                    "margin-mobile": "1.5rem",
-                    "section-gap": "clamp(3rem, 8vw, 8rem)",
-                    "margin-page": "clamp(1rem, 5vw, 4rem)",
-                    "gutter": "clamp(1.25rem, 3vw, 2rem)"
-            },
-            "fontFamily": {
-                    "headline-lg-mobile": ["Newsreader"],
-                    "body-lg": ["Work Sans"],
-                    "headline-xl": ["Newsreader"],
-                    "label-sm": ["Work Sans"],
-                    "headline-lg": ["Newsreader"],
-                    "body-md": ["Work Sans"]
-            },
-            "fontSize": {
-                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
-                    "headline-xl": ["48px", {"lineHeight": "1.1", "fontWeight": "600"}],
-                    "label-sm": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
-                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
-                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
-            }
-          },
-        },
-      }
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
-<style>
-        
-        .glass-card {
-            background: rgba(252, 249, 248, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid rgba(129, 85, 24, 0.1);
-        }
-        
-        .glass-header {
-            background: rgba(252, 249, 248, 0.8);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
+<script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
 
-        .campus-line-art {
-            mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
-            -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
-            opacity: 0.15;
-            pointer-events: none;
-        }
-
-        .active-nav-underline {
-            position: relative;
-        }
-        .active-nav-underline::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #815518;
-        }
-
-        .primary-glow {
-            box-shadow: 0 4px 20px rgba(196, 143, 77, 0.08);
-        }
-        
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        
-        .yearbook-viewer-shell {
-            background: linear-gradient(180deg, rgba(255,255,255,0.72), rgba(240,237,237,0.88));
-            border: 1px solid rgba(129, 85, 24, 0.12);
-            box-shadow: 0 20px 60px rgba(72, 43, 0, 0.08);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-
-        .flipbook-stage {
-            width: 100%;
-            min-height: 720px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1.5rem;
-        }
-
-        #yearbook {
-            margin: 0 auto;
-        }
-
-        .page {
-            background: #fff;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .page--cover {
-            background: linear-gradient(160deg, #815518, #c48f4d);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
-
-        .page canvas {
-            width: 100%;
-            height: 100%;
-            display: block;
-            object-fit: contain;
-            background: white;
-        }
-
-        .flipbook-toolbar {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.75rem;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .flipbook-toolbar .controls {
-            display: flex;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        .flipbook-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.85rem 1.1rem;
-            border-radius: 999px;
-            border: 1px solid rgba(129, 85, 24, 0.14);
-            background: rgba(255,255,255,0.75);
-            color: #815518;
-            font-weight: 700;
-            transition: all 0.2s ease;
-        }
-
-        .flipbook-btn:hover {
-            transform: translateY(-1px);
-            background: #815518;
-            color: white;
-        }
-
-        .flipbook-meta {
-            color: #504539;
-            font-size: 0.95rem;
-            font-weight: 500;
-        }
-
-        .flipbook-empty {
-            min-height: 500px;
-            display: grid;
-            place-items: center;
-            text-align: center;
-            color: #504539;
-            padding: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .flipbook-stage {
-                min-height: 540px;
-                padding: 1rem;
-            }
-        }
-    </style>
 </head>
 <body class="bg-surface font-body-md text-on-surface leading-relaxed overflow-x-hidden">
 <!-- TopNavBar -->
@@ -249,7 +21,7 @@
 <main class="pt-20">
 <!-- Hero Section -->
 <section class="relative min-h-[60vh] flex items-center overflow-hidden bg-surface-container-low">
-<div class="absolute inset-0 z-0 opacity-10 bg-cover bg-center" data-alt="A wide panoramic shot of the Indian Institute of Technology Madras campus at golden hour, highlighting the lush greenery, historic architecture, and the serene academic atmosphere. The lighting is soft and warm, casting long shadows across the pathways. The visual style is professional, capturing the heritage and prestige of the institution." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiolApNwN1XbI1wbzAzZxKxMFyWLaX-FBp-YYf_Ganjr_yylbka3X9kH0R8B5ap01ZYW_UVljCWUmsPTMVojG-fcz_EDD9FkYBiIVbuLVFRUzslwG0J4xitw6UwWxllTIZzTV4RKqECagP2WDdqUyhcHvV2mQFfZDckgiWG-aBPLusjvq15mAp8p8CNNXamFniCwiLPpk2A6trhZ4CtwGQ12LVN56WLcZmr8fH2hSjZTEA2NoszeU')"></div>
+<div class="absolute inset-0 z-0 opacity-10 bg-cover bg-center" data-alt="A wide panoramic shot of the Indian Institute of Technology Madras campus at golden hour, highlighting the lush greenery, historic architecture, and the serene academic atmosphere. The lighting is soft and warm, casting long shadows across the pathways. The visual style is professional, capturing the heritage and prestige of the institution."></div>
 <div class="relative z-10 w-full px-margin-page max-w-screen-2xl mx-auto py-16 lg:py-0">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 <div class="max-w-3xl space-y-6">
@@ -259,7 +31,7 @@
 <a href="#Events-Section">
 <button class="px-8 py-3 bg-primary text-on-primary font-bold rounded-lg primary-glow hover:bg-primary-container transition-colors">Explore Events</button>
 </a>
-<a href="https://dost.iitm.ac.in/photo_gallery.php" target="_blank" rel="noopener">
+<a href="https://dost.iitm.ac.in/photo_gallery.php" target="_blank" rel="noopener noreferrer">
 <button class="px-8 py-3 border border-secondary text-secondary font-bold rounded-lg hover:bg-secondary/5 transition-colors">Media Kit</button>
 </a>
 </div>
@@ -288,7 +60,6 @@
 
   <div class="yearbook-viewer-shell rounded-[28px] p-6 md:p-8">
 
-
     <div class="flipbook-stage rounded-2xl bg-surface-container-low">
       <div id="yearbook-wrapper" class="w-full">
         <div id="yearbook" class="mx-auto"></div>
@@ -298,7 +69,7 @@
                 <p id="empty-message" class="font-body-md text-on-surface-variant mb-4">
                 The year book viewer is preparing your PDF.
                 </p>
-                <button id="retry-load" class="flipbook-btn" type="button" style="display:none;">
+                <button id="retry-load" class="flipbook-btn hidden" type="button">
                 <span class="material-symbols-outlined">restart_alt</span>
                 <span>Try Again</span>
                 </button>
@@ -339,7 +110,8 @@
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <!-- Flagship 1 -->
 <div class="glass-card rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-<div class="relative h-56 sm:h-64 bg-surface-container-highest" style="background-image: url('Events-Flagship\\Copy of Orientation 2026-27.png'); background-size: cover; background-position: center;">
+<div class="relative h-56 sm:h-64 bg-surface-container-highest flagship-photo">
+<img src="assets/images/events/world-suicide-prevention.png" alt="World Suicide Prevention Day at Arunachalam Auditorium">
 </div>
 <div class="p-6 sm:p-8 space-y-3">
 <span class="px-3 py-1 bg-primary-container text-on-primary-container text-label-sm font-bold rounded-full uppercase tracking-wider">Flagship Event</span>
@@ -349,7 +121,8 @@
 </div>
 <!-- Flagship 2 -->
 <div class="glass-card rounded-2xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
-<div class="relative h-56 sm:h-64 bg-surface-container-highest" style="background-image: url('Events-Flagship\\Copy of Orientation 2026-27 (2).jpg'); background-size: cover; background-position: center;">
+<div class="relative h-56 sm:h-64 bg-surface-container-highest flagship-photo">
+<img src="assets/images/events/annual-wellness-drive.jpg" alt="Annual Wellness Drive">
 </div>
 <div class="p-6 sm:p-8 space-y-3">
 <span class="px-3 py-1 bg-primary-container text-on-primary-container text-label-sm font-bold rounded-full uppercase tracking-wider">Flagship Event</span>
@@ -451,16 +224,16 @@
 <h2 class="font-headline-lg text-headline-xl text-on-surface mb-4">Achievements &amp; Media</h2>
 <p class="font-body-lg text-on-surface-variant">Our journey of impact through the years. Recognized by institutional leaders and media outlets for pioneering student-led wellness.</p>
 </div>
-<a href="https://dost.iitm.ac.in/photo_gallery.php" target="_blank" rel="noopener">
+<a href="https://dost.iitm.ac.in/photo_gallery.php" target="_blank" rel="noopener noreferrer">
 <button class="px-6 py-2 border border-primary text-primary font-bold rounded-lg hover:bg-primary hover:text-white transition-all">View Media Archive</button>
 </a>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <!-- Achievement 1 -->
 <!-- TODO: replace href="#" with the Press Information Bureau article URL -->
-<a href="#" target="_blank" rel="noopener" class="group block">
+<a href="#" target="_blank" rel="noopener noreferrer" class="group block">
 <div class="relative h-64 mb-6 rounded-xl overflow-hidden">
-<img alt="IITM MITR Media Feature" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="Achievements\gallery_44_1785215350_939fa9f8.jpg"/>
+<img alt="IITM MITR Media Feature" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/images/achievements/gallery_44_1785215350_939fa9f8.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 <div class="absolute bottom-4 left-4 right-4">
 <p class="text-white font-bold text-label-sm"> Press Information Bureau</p>
@@ -473,9 +246,9 @@
 </a>
 <!-- Achievement 2 -->
 <!-- TODO: replace href="#" with the Times of India article URL -->
-<a href="#" target="_blank" rel="noopener" class="group block">
+<a href="#" target="_blank" rel="noopener noreferrer" class="group block">
 <div class="relative h-64 mb-6 rounded-xl overflow-hidden">
-<img alt="IITM MITR Media Feature" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="Achievements\gallery_36_1777457196_bf759220.jpg"/>
+<img alt="IITM MITR Media Feature" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="assets/images/achievements/gallery_36_1777457196_bf759220.jpg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
 <div class="absolute bottom-4 left-4 right-4">
 <p class="text-white font-bold text-label-sm">Times of India</p>
@@ -503,7 +276,7 @@
 <div class="glass-card p-10 rounded-2xl relative">
 <div class="absolute -top-6 left-10">
 <div class="w-20 h-20 rounded-full border-4 border-surface overflow-hidden shadow-lg">
-<img class="w-full h-full object-cover" data-alt="A professional headshot of a young male professional in his late 20s, with a warm and confident expression. He is dressed in a smart-casual blazer. The background is a soft, blurred corporate or academic setting with warm ambient lighting. The visual style is polished and high-end, reflecting a successful career path post-IIT Madras." src="Alumni\15a9fbd0-b956-4674-89ad-08a2c698682b.jpg"/>
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young male professional in his late 20s, with a warm and confident expression. He is dressed in a smart-casual blazer. The background is a soft, blurred corporate or academic setting with warm ambient lighting. The visual style is polished and high-end, reflecting a successful career path post-IIT Madras." src="assets/images/alumni/15a9fbd0-b956-4674-89ad-08a2c698682b.jpg"/>
 </div>
 </div>
 <span class="material-symbols-outlined text-primary/20 text-6xl absolute top-6 right-10">format_quote</span>
@@ -519,7 +292,7 @@
 <div class="glass-card p-10 rounded-2xl relative">
 <div class="absolute -top-6 left-10">
 <div class="w-20 h-20 rounded-full border-4 border-surface overflow-hidden shadow-lg">
-<img class="w-full h-full object-cover" data-alt="A professional headshot of a young female professional with an approachable and intelligent gaze. She is wearing elegant, modern business attire. The lighting is soft and professional, with a light neutral background that creates a clean and high-status aesthetic. Her expression conveys empathy and competence, aligning with the MITR alumni brand." src="Alumni\701421dd-4174-4104-bc5a-33be020da418.jpg"/>
+<img class="w-full h-full object-cover" data-alt="A professional headshot of a young female professional with an approachable and intelligent gaze. She is wearing elegant, modern business attire. The lighting is soft and professional, with a light neutral background that creates a clean and high-status aesthetic. Her expression conveys empathy and competence, aligning with the MITR alumni brand." src="assets/images/alumni/701421dd-4174-4104-bc5a-33be020da418.jpg"/>
 </div>
 </div>
 <span class="material-symbols-outlined text-primary/20 text-6xl absolute top-6 right-10">format_quote</span>
@@ -555,10 +328,10 @@ Student Advisor 2024-25
           <span class="material-symbols-outlined text-2xl">arrow_back</span>
         </button>
         <span class="material-symbols-outlined text-2xl shrink-0">groups</span>
-        <h3 class="text-xl sm:text-2xl font-bold truncate" id="alumni-modal-title" style="font-family:'Newsreader',serif">MITR Alumni Data</h3>
+        <h3 class="text-xl sm:text-2xl font-bold truncate font-newsreader" id="alumni-modal-title">MITR Alumni Data</h3>
       </div>
       <div class="flex items-center gap-3 shrink-0">
-        <a id="alumni-modal-open-tab" href="#" target="_blank" rel="noopener"
+        <a id="alumni-modal-open-tab" href="#" target="_blank" rel="noopener noreferrer"
            class="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-secondary hover:underline whitespace-nowrap">
           <span class="material-symbols-outlined text-base">open_in_new</span>Open in new tab
         </a>
@@ -597,7 +370,7 @@ Student Advisor 2024-25
       <div class="flex-1 overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container-low min-h-0">
         <iframe id="alumni-modal-iframe" title="MITR alumni data" class="w-full h-[60vh] sm:h-[70vh]"></iframe>
       </div>
-      <a id="alumni-modal-open-tab-mobile" href="#" target="_blank" rel="noopener"
+      <a id="alumni-modal-open-tab-mobile" href="#" target="_blank" rel="noopener noreferrer"
          class="sm:hidden mt-4 flex items-center justify-center gap-2 bg-primary text-on-primary px-4 py-2.5 rounded-full font-bold text-sm shrink-0">
         <span class="material-symbols-outlined text-base">open_in_new</span>Open in new tab
       </a>
@@ -607,537 +380,9 @@ Student Advisor 2024-25
 
 <!-- Footer -->
 <div data-site-footer></div>
-<script>
-    // Events section: populated from events.json
-    (function loadEvents() {
-        var grid = document.getElementById('events-grid');
-        if (!grid) return;
 
-        fetch('events.json')
-            .then(function (res) { return res.json(); })
-            .then(function (events) {
-                grid.innerHTML = events.map(function (e) {
-                    return '<div class="glass-card rounded-xl p-6 flex flex-col gap-3 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">'
-                        + '<div class="flex items-center justify-between">'
-                        + '<span class="material-symbols-outlined text-primary text-3xl">' + (e.icon || 'celebration') + '</span>'
-                        + (e.category ? '<span class="px-2 py-1 bg-surface-container-highest text-on-surface-variant text-xs font-bold rounded">' + e.category + '</span>' : '')
-                        + '</div>'
-                        + '<h4 class="font-headline text-lg font-bold text-on-surface leading-snug">' + e.name + '</h4>'
-                        + (e.description ? '<p class="text-on-surface-variant text-sm">' + e.description + '</p>' : '')
-                        + '</div>';
-                }).join('');
-            })
-            .catch(function (err) {
-                console.error('Failed to load events.json', err);
-                grid.innerHTML = '<p class="col-span-full text-center py-8 text-on-surface-variant text-sm">Unable to load events right now.</p>';
-            });
-    })();
-
-    // Alumni data preview modal: one button opens a chooser for the two
-    // academic-year rosters, each of which then previews that year's PDF
-    // in the same modal (rather than stacking a second dialog on top).
-    (function alumniPreview() {
-        var openBtn = document.getElementById('alumni-preview-btn');
-        var modal = document.getElementById('alumni-modal');
-        if (!openBtn || !modal) return;
-
-        var closeBtn = document.getElementById('alumni-modal-close');
-        var backBtn = document.getElementById('alumni-modal-back');
-        var chooser = document.getElementById('alumni-modal-chooser');
-        var viewer = document.getElementById('alumni-modal-viewer');
-        var iframe = document.getElementById('alumni-modal-iframe');
-        var openTabDesktop = document.getElementById('alumni-modal-open-tab');
-        var openTabMobile = document.getElementById('alumni-modal-open-tab-mobile');
-        var title = document.getElementById('alumni-modal-title');
-        var yearButtons = modal.querySelectorAll('.alumni-year-btn');
-
-        function showChooser() {
-            chooser.classList.remove('hidden');
-            viewer.classList.add('hidden');
-            viewer.classList.remove('flex');
-            backBtn.classList.add('hidden');
-            title.textContent = 'MITR Alumni Data';
-            iframe.src = '';
-        }
-
-        function showYear(year, pdf) {
-            chooser.classList.add('hidden');
-            viewer.classList.remove('hidden');
-            viewer.classList.add('flex');
-            backBtn.classList.remove('hidden');
-            title.textContent = year + ' Roster';
-            iframe.src = pdf;
-            openTabDesktop.href = pdf;
-            openTabMobile.href = pdf;
-        }
-
-        function open() {
-            showChooser();
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        function close() {
-            modal.classList.add('hidden');
-            modal.classList.remove('flex');
-            iframe.src = '';
-        }
-
-        openBtn.addEventListener('click', open);
-        closeBtn.addEventListener('click', close);
-        backBtn.addEventListener('click', showChooser);
-        modal.addEventListener('click', function (e) { if (e.target === modal) close(); });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && !modal.classList.contains('hidden')) close();
-        });
-
-        Array.prototype.forEach.call(yearButtons, function (btn) {
-            btn.addEventListener('click', function () {
-                showYear(btn.getAttribute('data-alumni-year'), btn.getAttribute('data-alumni-pdf'));
-            });
-        });
-    })();
-
-    // Hero photo carousel: cycles through the "Event Carosel" photos
-    (function heroCarousel() {
-        var root = document.getElementById('hero-carousel');
-        if (!root) return;
-
-        var PHOTOS = [
-            'WhatsApp Image 2026-08-13 at 00.41.24.jpeg',
-            'WhatsApp Image 2026-08-13 at 00.41.25.jpeg',
-            'WhatsApp Image 2026-08-13 at 00.41.25 (1).jpeg',
-            'WhatsApp Image 2026-08-13 at 00.41.25 (2).jpeg',
-            'WhatsApp Image 2026-08-13 at 00.41.26 (1).jpeg',
-            'WhatsApp Image 2026-08-13 at 00.41.27.jpeg',
-            'WhatsApp Image 2026-08-13 at 00.41.27 (1).jpeg',
-            'WhatsApp Image 2026-08-13 at 00.41.27 (3).jpeg',
-            'WhatsApp Image 2026-08-13 at 00.41.28.jpeg'
-        ].map(function (name) { return encodeURI('Event Carosel/' + name); });
-
-        var track = document.getElementById('hero-carousel-track');
-        var dotsWrap = document.getElementById('hero-carousel-dots');
-        var prevBtn = document.getElementById('hero-carousel-prev');
-        var nextBtn = document.getElementById('hero-carousel-next');
-
-        var slides = PHOTOS.map(function (src, i) {
-            var img = document.createElement('img');
-            img.src = src;
-            img.alt = 'MITR event photo ' + (i + 1);
-            img.loading = i === 0 ? 'eager' : 'lazy';
-            img.className = 'absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ease-in-out';
-            img.style.opacity = i === 0 ? '1' : '0';
-            track.appendChild(img);
-            return img;
-        });
-
-        var dots = PHOTOS.map(function (_, i) {
-            var dot = document.createElement('button');
-            dot.type = 'button';
-            dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
-            dotsWrap.appendChild(dot);
-            dot.addEventListener('click', function () { goTo(i); });
-            return dot;
-        });
-
-        var current = 0;
-        var timer = null;
-
-        function render() {
-            slides.forEach(function (img, i) { img.style.opacity = i === current ? '1' : '0'; });
-            dots.forEach(function (dot, i) {
-                dot.className = 'h-2 rounded-full transition-all ' + (i === current ? 'bg-white w-5' : 'bg-white/50 w-2');
-            });
-        }
-
-        function goTo(index) {
-            current = (index + slides.length) % slides.length;
-            render();
-            restart();
-        }
-
-        function next() { goTo(current + 1); }
-        function prev() { goTo(current - 1); }
-
-        function restart() {
-            if (timer) clearInterval(timer);
-            timer = setInterval(next, 4500);
-        }
-
-        if (prevBtn) prevBtn.addEventListener('click', prev);
-        if (nextBtn) nextBtn.addEventListener('click', next);
-        root.addEventListener('mouseenter', function () { if (timer) clearInterval(timer); });
-        root.addEventListener('mouseleave', restart);
-
-        render();
-        restart();
-    })();
-
-    // Existing card hover effect
-    document.querySelectorAll('.glass-card').forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.style.transform = 'translateY(-5px)';
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.transform = 'translateY(0)';
-        });
-    });
-
-    // Existing header scroll effect
-    window.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-        if (window.scrollY > 20) {
-            header.classList.add('py-2', 'h-16');
-            header.classList.remove('h-20');
-        } else {
-            header.classList.remove('py-2', 'h-16');
-            header.classList.add('h-20');
-        }
-    });
-
-    // ---------- PDF Flipbook with error handling ----------
-    const PDF_URL = 'yearbook.pdf';
-    const RENDER_SCALE = 1.5; // higher = crisper pages, slower to render
-    const CHUNK_SIZE = 6; // pages rendered per batch, so the book opens after the first batch instead of waiting on the whole PDF
-
-    // page-flip listens for window "resize" and re-fits the book on every
-    // one. On mobile, scrolling shows/hides the browser's URL bar, which
-    // fires resize events even though only the *height* changed — the book
-    // has nothing to do with height in 'stretch' mode, but it recalculates
-    // anyway, which is what makes it look like it keeps zooming in and out
-    // while scrolling. This scopes a width-only guard around just the resize
-    // listener page-flip registers during construction, leaving every other
-    // resize listener on the page untouched.
-    function createPageFlipWithResizeGuard(container, options) {
-        const realAddEventListener = window.addEventListener.bind(window);
-        let lastWidth = window.innerWidth;
-        window.addEventListener = function (type, listener, opts) {
-            if (type !== 'resize') return realAddEventListener(type, listener, opts);
-            const guarded = function (e) {
-                if (window.innerWidth === lastWidth) return;
-                lastWidth = window.innerWidth;
-                listener(e);
-            };
-            return realAddEventListener('resize', guarded, opts);
-        };
-        try {
-            return new St.PageFlip(container, options);
-        } finally {
-            window.addEventListener = realAddEventListener;
-        }
-    }
-
-    const prevBtn = document.getElementById('prev-page');
-    const nextBtn = document.getElementById('next-page');
-    const reloadBtn = document.getElementById('reload-pdf');
-    const retryBtn = document.getElementById('retry-load');
-
-    const yearbook = document.getElementById('yearbook');
-    const emptyState = document.getElementById('yearbook-empty');
-    const statusEl = document.getElementById('book-status');
-    const emptyTitle = document.getElementById('empty-title');
-    const emptyMessage = document.getElementById('empty-message');
-
-    let pageFlipInstance = null;
-    let currentPdf = null;
-    let totalPages = 0;
-    let isBookReady = false;
-    let isLoading = false;
-    let loadToken = 0;
-
-    function updateStatus(text) {
-        if (statusEl) statusEl.textContent = text;
-    }
-
-    function setButtonsDisabled(disabled) {
-        [prevBtn, nextBtn, reloadBtn].forEach(btn => {
-            if (!btn) return;
-            btn.disabled = disabled;
-            btn.style.opacity = disabled ? '0.5' : '1';
-            btn.style.pointerEvents = disabled ? 'none' : 'auto';
-        });
-    }
-
-    function showEmptyState(title, message, showRetry = false) {
-        emptyTitle.textContent = title;
-        emptyMessage.textContent = message;
-        retryBtn.style.display = showRetry ? 'inline-flex' : 'none';
-        emptyState.style.display = 'grid';
-        yearbook.style.display = 'none';
-    }
-
-    function hideEmptyState() {
-        emptyState.style.display = 'none';
-        yearbook.style.display = 'block';
-    }
-
-    function resetViewerState() {
-        isBookReady = false;
-        currentPdf = null;
-        totalPages = 0;
-        setButtonsDisabled(true);
-    }
-
-    function clearFlipbook() {
-        try {
-            if (pageFlipInstance) {
-                pageFlipInstance.destroy();
-                pageFlipInstance = null;
-            }
-        } catch (error) {
-            console.warn('Failed to destroy previous flipbook instance:', error);
-        }
-
-        yearbook.innerHTML = '';
-    }
-
-    function getReadablePdfError(error) {
-        const name = error?.name || '';
-        const message = error?.message || '';
-
-        if (name === 'MissingPDFException') {
-            return {
-                title: 'PDF file not found',
-                message: 'Could not find yearbook.pdf. Place it in the same folder as this HTML file.'
-            };
-        }
-
-        if (name === 'InvalidPDFException') {
-            return {
-                title: 'Invalid PDF file',
-                message: 'yearbook.pdf exists, but it is not a valid PDF or may be corrupted.'
-            };
-        }
-
-        if (name === 'PasswordException') {
-            return {
-                title: 'Password-protected PDF',
-                message: 'This PDF is protected by a password. Use an unlocked copy of yearbook.pdf.'
-            };
-        }
-
-        if (name === 'UnexpectedResponseException') {
-            return {
-                title: 'Unable to fetch PDF',
-                message: 'The browser could not fetch yearbook.pdf. Check the path and make sure the site is served correctly.'
-            };
-        }
-
-        if (message.includes('Failed to fetch') || message.includes('NetworkError')) {
-            return {
-                title: 'Unable to fetch PDF',
-                message: 'The browser could not reach yearbook.pdf. If you opened this file directly (file:///...), serve the folder with a local web server instead — fetch() is blocked on file:// pages.'
-            };
-        }
-
-        if (message) {
-            return {
-                title: 'Failed to load PDF',
-                message
-            };
-        }
-
-        return {
-            title: 'Failed to load PDF',
-            message: 'Something went wrong while opening yearbook.pdf.'
-        };
-    }
-
-    // Renders a single PDF page onto a canvas sized to RENDER_SCALE.
-    async function renderPageToCanvas(pdf, pageNumber) {
-        const page = await pdf.getPage(pageNumber);
-        const viewport = page.getViewport({ scale: RENDER_SCALE });
-
-        const canvas = document.createElement('canvas');
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-
-        const context = canvas.getContext('2d');
-        await page.render({ canvasContext: context, viewport }).promise;
-
-        return canvas;
-    }
-
-    async function renderPdfToFlipbook(url = PDF_URL) {
-        if (isLoading) return;
-
-        const myToken = ++loadToken;
-        isLoading = true;
-        setButtonsDisabled(true);
-        resetViewerState();
-        clearFlipbook();
-        updateStatus('Loading yearbook.pdf...');
-        showEmptyState('Loading yearbook.pdf', 'The year book viewer is preparing your PDF.');
-
-        try {
-            pdfjsLib.GlobalWorkerOptions.workerSrc =
-                'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-            const response = await fetch(url);
-            if (!response.ok) {
-                throw new Error(`Failed to fetch PDF: ${response.status} ${response.statusText}`);
-            }
-
-            const arrayBuffer = await response.arrayBuffer();
-            const loadingTask = pdfjsLib.getDocument({ data: arrayBuffer });
-            const pdf = await loadingTask.promise;
-
-            // Bail out if a newer load started while we were fetching/parsing.
-            if (myToken !== loadToken) return;
-
-            currentPdf = pdf;
-            totalPages = pdf.numPages;
-
-            if (totalPages === 0) {
-                throw new Error('yearbook.pdf has no pages.');
-            }
-
-            // Render pages in batches of CHUNK_SIZE and fold each batch into
-            // the book as soon as it's ready, rather than waiting for every
-            // page in the PDF to render before the reader can open it.
-            let loadedPages = 0;
-
-            // Folding a batch into an already-open book (updateFromHtml) rebuilds
-            // and redraws the whole flipbook, which is fast on desktop but visibly
-            // flashes/strobes on slower phones if it happens every ~6 pages. Once
-            // the book is open, later batches are only folded in at most this often.
-            const MIN_UPDATE_INTERVAL_MS = 900;
-            let lastFlipbookUpdate = 0;
-
-            function statusForCurrentPage(pageIndex) {
-                return loadedPages < totalPages
-                    ? `Page ${pageIndex + 1} of ${totalPages} (${loadedPages} pages ready)`
-                    : `Page ${pageIndex + 1} of ${totalPages}`;
-            }
-
-            updateStatus(`Rendering pages 1-${Math.min(CHUNK_SIZE, totalPages)} of ${totalPages}...`);
-
-            for (let start = 1; start <= totalPages; start += CHUNK_SIZE) {
-                const end = Math.min(start + CHUNK_SIZE - 1, totalPages);
-
-                for (let i = start; i <= end; i++) {
-                    if (myToken !== loadToken) return;
-                    const canvas = await renderPageToCanvas(pdf, i);
-                    const pageDiv = document.createElement('div');
-                    pageDiv.className = 'page';
-                    // Stays hidden until PageFlip claims it (adds "stf__item",
-                    // which is display:none by default until that page's spread
-                    // is active) at the next fold-in. Without this, a freshly
-                    // rendered page sits as a plain visible block and the whole
-                    // batch stacks down the page while it waits to be folded in.
-                    pageDiv.style.display = 'none';
-                    pageDiv.appendChild(canvas);
-                    yearbook.appendChild(pageDiv);
-                    loadedPages = i;
-                }
-
-                if (myToken !== loadToken) return;
-
-                const isLastBatch = end >= totalPages;
-                const dueForUpdate = !pageFlipInstance || isLastBatch
-                    || (Date.now() - lastFlipbookUpdate >= MIN_UPDATE_INTERVAL_MS);
-
-                if (!dueForUpdate) {
-                    // Already rendered and appended to the DOM — it will be
-                    // folded into the book at the next scheduled update.
-                    continue;
-                }
-
-                const pageEls = document.querySelectorAll('#yearbook .page');
-                lastFlipbookUpdate = Date.now();
-
-                if (!pageFlipInstance) {
-                    // First batch: create the book and show it immediately —
-                    // the reader can start flipping while later batches render.
-                    pageFlipInstance = createPageFlipWithResizeGuard(yearbook, {
-                        width: 500,
-                        height: 700,
-                        size: 'stretch',
-                        minWidth: 280,
-                        maxWidth: 1000,
-                        minHeight: 360,
-                        maxHeight: 1350,
-                        maxShadowOpacity: 0.5,
-                        showCover: false,
-                        mobileScrollSupport: false,
-                        useMouseEvents: true
-                    });
-
-                    pageFlipInstance.loadFromHTML(pageEls);
-
-                    pageFlipInstance.on('flip', (e) => {
-                        updateStatus(statusForCurrentPage(e.data));
-                    });
-
-                    hideEmptyState();
-                    isBookReady = true;
-                    setButtonsDisabled(false);
-                } else {
-                    // Later batches: fold the newly rendered pages into the
-                    // book without disturbing whatever page the reader is on.
-                    pageFlipInstance.updateFromHtml(pageEls);
-                }
-
-                // Once the book is open, the status line always reflects the
-                // reader's actual position (kept live by the 'flip' handler
-                // above) plus how many pages are ready so far.
-                updateStatus(statusForCurrentPage(pageFlipInstance.getCurrentPageIndex()));
-            }
-        } catch (error) {
-            console.error('PDF flipbook error:', error);
-            if (myToken !== loadToken) return;
-            const { title, message } = getReadablePdfError(error);
-            resetViewerState();
-            clearFlipbook();
-            showEmptyState(title, message, true);
-            updateStatus('Failed to load yearbook.pdf');
-        } finally {
-            if (myToken === loadToken) isLoading = false;
-        }
-    }
-
-    prevBtn.addEventListener('click', () => {
-        if (!isBookReady || !pageFlipInstance) return;
-        try {
-            pageFlipInstance.flipPrev();
-        } catch (error) {
-            console.error('Failed to go to previous page:', error);
-            updateStatus('Could not flip to previous page');
-        }
-    });
-
-    nextBtn.addEventListener('click', () => {
-        if (!isBookReady || !pageFlipInstance) return;
-        try {
-            pageFlipInstance.flipNext();
-        } catch (error) {
-            console.error('Failed to go to next page:', error);
-            updateStatus('Could not flip to next page');
-        }
-    });
-
-    reloadBtn.addEventListener('click', () => {
-        if (isLoading) return;
-        renderPdfToFlipbook();
-    });
-
-    retryBtn.addEventListener('click', () => {
-        if (isLoading) return;
-        renderPdfToFlipbook();
-    });
-
-    window.addEventListener('error', (event) => {
-        console.error('Window error:', event.error || event.message);
-    });
-
-    window.addEventListener('unhandledrejection', (event) => {
-        console.error('Unhandled promise rejection:', event.reason);
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-        renderPdfToFlipbook();
-    });
-</script>
-<script src="site-chrome.js"></script>
-<script src="feedback.js"></script>
+<script src="src/js/site-chrome.js"></script>
+<script src="src/js/submit-form.js"></script>
+<script src="src/js/yearbook-page.js"></script>
+<script src="src/js/feedback.js"></script>
 </body></html>

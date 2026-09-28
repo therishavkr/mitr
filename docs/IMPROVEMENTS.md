@@ -60,7 +60,7 @@ Forward-looking ideas, as opposed to the fixes above — none of this is broken 
 
 ### Content & data
 
-- **A lightweight admin flow for the JSON data files.** `events.json`, `team.json`, `quotes.json`, and `Faculty co  ord/faculty.json` all now drive their pages — a real improvement over hardcoded HTML — but they're still hand-edited JSON in a code editor. A small static form (even client-side only, generating the JSON to copy-paste, or backed by a free headless CMS like Decap/Netlify CMS) would let a non-technical team member update the roster or events without touching code.
+- **A lightweight admin flow for the JSON data files.** `events.json`, `team.json`, `quotes.json`, and `src/data/faculty.json` all now drive their pages — a real improvement over hardcoded HTML — but they're still hand-edited JSON in a code editor. A small static form (even client-side only, generating the JSON to copy-paste, or backed by a free headless CMS like Decap/Netlify CMS) would let a non-technical team member update the roster or events without touching code.
 - **A real events calendar**, not just a static grid — filterable by upcoming/past, with dates, so "Workshops & Events" can show what's actually happening this month rather than a fixed list.
 - **Multi-language content.** The team directory already tracks each coordinator's spoken languages; the site itself is English-only. Even a partial Tamil/Hindi translation of the emergency contacts page (the highest-stakes page on the site) would meaningfully widen who can use it in a crisis.
 

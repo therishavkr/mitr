@@ -6,63 +6,19 @@
     <title>Contact Us | IITM MITR</title>
     <meta name="description" content="Contact MITR peer coordinators, department representatives, hostel representatives, and faculty advisors at IIT Madras. Filter by hostel, department, and language.">
 
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="assets/brand/favicon.ico" sizes="any">
+    <link rel="icon" href="assets/brand/favicon.png" type="image/png">
 
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <!-- Fonts -->
+    <link rel="stylesheet" href="src/css/tailwind.min.css">
+<link rel="stylesheet" href="src/css/mitr-ui.css">
+<link rel="stylesheet" href="src/css/directory-page.css">
+<!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#815518",
-              "on-primary": "#ffffff",
-              "primary-container": "#c48f4d",
-              secondary: "#a43b37",
-              "on-secondary": "#ffffff",
-              background: "#fcf9f8",
-              surface: "#fcf9f8",
-              "on-surface": "#1c1b1b",
-              "on-surface-variant": "#504539",
-              "surface-container": "#f0eded",
-              "surface-container-low": "#f6f3f2",
-              "surface-container-high": "#eae7e7",
-              outline: "#827567",
-              "outline-variant": "#d4c4b4"
-            },
-            fontFamily: {
-              headline: ["Newsreader", "serif"],
-              body: ["Work Sans", "sans-serif"]
-            },
-            spacing: {
-              page: "clamp(1rem, 5vw, 4rem)",
-              gutter: "clamp(1.25rem, 3vw, 2rem)",
-              "section-gap": "clamp(3rem, 8vw, 6rem)"
-            }
-          }
-        }
-      }
-    </script>
-
-    <style>
-      .glass-panel {
-        background: rgba(252, 249, 248, 0.85);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(212, 196, 180, 0.4);
-      }
-      .gold-glow {
-        box-shadow: 0 10px 30px -10px rgba(129, 85, 24, 0.15);
-      }
-      .font-headline-lg { font-family: 'Newsreader', serif; font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1.2; }
-      .font-body-md { font-family: 'Work Sans', sans-serif; font-size: 1rem; }
-    </style>
+    
   </head>
 
   <body class="bg-background text-on-surface font-body font-normal antialiased min-h-screen flex flex-col">
@@ -125,6 +81,7 @@
               <option value="Godavari">Godavari</option>
               <option value="Jamuna">Jamuna</option>
               <option value="Krishna">Krishna</option>
+              <option value="Mahanadi">Mahanadi</option>
               <option value="Mandakini">Mandakini</option>
               <option value="Narmada">Narmada</option>
               <option value="Pampa">Pampa</option>
@@ -135,6 +92,7 @@
               <option value="Sindhu">Sindhu</option>
               <option value="Tamraparani">Tamraparani</option>
               <option value="Tapti">Tapti</option>
+              <option value="Tunga">Tunga</option>
             </select>
           </div>
 
@@ -214,10 +172,10 @@
         <div class="flex items-center justify-between pb-4 border-b border-outline-variant/30 mb-4 shrink-0 gap-3">
           <div class="flex items-center gap-2.5 text-primary min-w-0">
             <span class="material-symbols-outlined text-2xl shrink-0">picture_as_pdf</span>
-            <h3 class="text-xl sm:text-2xl font-bold truncate" id="schedule-modal-title" style="font-family:'Newsreader',serif">Counsellor Schedule</h3>
+            <h3 class="text-xl sm:text-2xl font-bold truncate font-newsreader" id="schedule-modal-title">Counsellor Schedule</h3>
           </div>
           <div class="flex items-center gap-3 shrink-0">
-            <a href="counsellors.pdf" target="_blank" rel="noopener"
+            <a href="assets/docs/counsellors.pdf" target="_blank" rel="noopener noreferrer"
                class="hidden sm:inline-flex items-center gap-1.5 text-sm font-bold text-secondary hover:underline whitespace-nowrap">
               <span class="material-symbols-outlined text-base">open_in_new</span>Open in new tab
             </a>
@@ -228,9 +186,9 @@
           </div>
         </div>
         <div class="flex-1 overflow-hidden rounded-xl border border-outline-variant/30 bg-surface-container-low min-h-0">
-          <iframe src="counsellors.pdf" title="Department &amp; Hostel Counsellor Schedule" class="w-full h-[60vh] sm:h-[70vh]"></iframe>
+          <iframe src="assets/docs/counsellors.pdf" title="Department &amp; Hostel Counsellor Schedule" class="w-full h-[60vh] sm:h-[70vh]"></iframe>
         </div>
-        <a href="counsellors.pdf" target="_blank" rel="noopener"
+        <a href="assets/docs/counsellors.pdf" target="_blank" rel="noopener noreferrer"
            class="sm:hidden mt-4 flex items-center justify-center gap-2 bg-primary text-on-primary px-4 py-2.5 rounded-full font-bold text-sm shrink-0">
           <span class="material-symbols-outlined text-base">open_in_new</span>Open in new tab
         </a>
@@ -241,189 +199,15 @@
     <div data-site-footer></div>
 
     <!-- Scripts -->
-    <script src="site-chrome.js"></script>
-    <script src="feedback.js"></script>
-    <script src="departments.js"></script>
-    <script src="booking.js"></script>
-    <script src="coffee.js"></script>
+    
+    <script src="src/js/site-chrome.js"></script>
+    <script src="src/js/submit-form.js"></script>
+    <script src="src/js/feedback.js"></script>
+    <script src="src/js/departments.js"></script>
+    <script src="src/js/booking.js"></script>
+    <script src="src/js/coffee.js"></script>
+    <script src="src/js/directory-page.js"></script>
 
-    <script>
-      (function() {
-        // Data for peer coordinators (Hostel, Dept, Languages) — loaded from team.json
-        let peerCoordinators = [];
-        let facultyData = [];
-
-        const searchInput = document.getElementById("search-input");
-        const deptFilter = document.getElementById("department-filter");
-        const hostelFilter = document.getElementById("hostel-filter");
-        const langFilter = document.getElementById("language-filter");
-
-        const coordGrid = document.getElementById("coordinators-grid");
-        const facultyGrid = document.getElementById("faculty-grid");
-
-        // The coffee / mentor dialog lives in coffee.js and is opened by the
-        // banner button above. Peer cards deliberately have no per-coordinator
-        // booking button: requests go to the team, not to a chosen individual.
-
-        // Populate department options
-        // Normalised before de-duplicating, so a department the peer list calls
-        // "Engineering Design" and faculty.json calls "ED" is one option, not two
-        // that each hide half the results.
-        function populateDepts() {
-          const depts = new Set();
-          peerCoordinators.forEach(p => depts.add(departmentName(p.department)));
-          facultyData.forEach(f => depts.add(departmentName(f.department)));
-
-          Array.from(depts).sort().forEach(d => {
-            if (!d) return;
-            const opt = document.createElement("option");
-            opt.value = d;
-            opt.textContent = d;
-            deptFilter.appendChild(opt);
-          });
-        }
-
-        function renderPeers(list) {
-          if (!list.length) {
-            coordGrid.innerHTML = `<p class="col-span-full text-center py-8 text-on-surface-variant">No peer coordinators match your search criteria.</p>`;
-            return;
-          }
-
-          coordGrid.innerHTML = list.map(p => `
-            <article class="glass-panel p-6 rounded-3xl border border-outline-variant/40 flex flex-col justify-between hover:translate-y-[-4px] transition-all">
-              <div class="space-y-3">
-                <div class="flex items-center justify-between">
-                  <span class="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full">${p.designation}</span>
-                  <span class="text-xs font-semibold text-outline">${p.hostel}</span>
-                </div>
-                <h3 class="font-headline text-xl font-bold text-on-surface">${p.name}</h3>
-                <p class="text-xs text-on-surface-variant font-medium">${departmentName(p.department)}</p>
-
-                <div class="space-y-1.5 text-xs text-on-surface-variant pt-2">
-                  <p class="flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm text-primary">translate</span>
-                    <span>${p.language.join(", ")}</span>
-                  </p>
-                  <p class="flex items-center gap-1.5">
-                    <span class="material-symbols-outlined text-sm text-primary">mail</span>
-                    <a href="mailto:${p.email}" class="hover:underline truncate">${p.email}</a>
-                  </p>
-                </div>
-              </div>
-            </article>
-          `).join("");
-        }
-
-        function renderFaculty(list) {
-          if (!list.length) {
-            facultyGrid.innerHTML = `<p class="col-span-full text-center py-8 text-on-surface-variant">No faculty coordinators match your search criteria.</p>`;
-            return;
-          }
-
-          facultyGrid.innerHTML = list.map(f => {
-            const imgPath = f.image ? `Faculty co  ord/${encodeURIComponent(f.image)}` : "https://placehold.co/600x600/eae7e7/815518?text=Faculty";
-            return `
-              <article class="glass-panel p-5 rounded-3xl border border-outline-variant/40 flex flex-col justify-between hover:translate-y-[-4px] transition-all">
-                <div class="space-y-3">
-                  <div class="aspect-square rounded-2xl overflow-hidden bg-surface-container relative">
-                    <img loading="lazy" class="w-full h-full object-cover" src="${imgPath}" alt="${f.name}" onerror="this.src='https://placehold.co/600x600/eae7e7/815518?text=Faculty';" />
-                    <span class="absolute bottom-2 right-2 bg-primary text-on-primary text-[10px] px-2 py-0.5 rounded font-bold uppercase">${f.department}</span>
-                  </div>
-                  <h3 class="font-headline text-xl font-bold text-on-surface">${f.name}</h3>
-                  <p class="text-xs text-on-surface-variant">${departmentName(f.department)}</p>
-                </div>
-
-                <div class="pt-4 border-t border-outline-variant/30 mt-4 space-y-2 text-xs">
-                  <a href="mailto:${f.email}" class="flex items-center gap-2 text-secondary hover:underline truncate">
-                    <span class="material-symbols-outlined text-sm">mail</span>
-                    <span class="truncate">${f.email}</span>
-                  </a>
-                  ${f.contact ? `
-                    <a href="tel:+91${f.contact}" class="flex items-center gap-2 text-secondary hover:underline">
-                      <span class="material-symbols-outlined text-sm">call</span>
-                      <span>+91 ${f.contact}</span>
-                    </a>
-                  ` : ''}
-                </div>
-              </article>
-            `;
-          }).join("");
-        }
-
-        function filterAll() {
-          const q = searchInput.value.toLowerCase().trim();
-          const selectedDept = deptFilter.value;
-          const selectedHostel = hostelFilter.value;
-          const selectedLang = langFilter.value;
-
-          const filteredPeers = peerCoordinators.filter(p => {
-            const dept = departmentName(p.department);
-            const matchesSearch = p.name.toLowerCase().includes(q) || p.email.toLowerCase().includes(q) || p.department.toLowerCase().includes(q) || dept.toLowerCase().includes(q);
-            const matchesDept = selectedDept === "all" || dept === selectedDept;
-            const matchesHostel = selectedHostel === "all" || p.hostel === selectedHostel;
-            const matchesLang = selectedLang === "all" || p.language.includes(selectedLang);
-            return matchesSearch && matchesDept && matchesHostel && matchesLang;
-          });
-
-          const filteredFaculty = facultyData.filter(f => {
-            const dept = departmentName(f.department);
-            const matchesSearch = f.name.toLowerCase().includes(q) || f.email.toLowerCase().includes(q) || f.department.toLowerCase().includes(q) || dept.toLowerCase().includes(q);
-            const matchesDept = selectedDept === "all" || dept === selectedDept;
-            return matchesSearch && matchesDept;
-          });
-
-          renderPeers(filteredPeers);
-          renderFaculty(filteredFaculty);
-        }
-
-        // Load peer coordinators (team.json) and faculty advisors (faculty.json) together
-        Promise.all([
-          fetch("team.json").then(res => res.json()).catch(err => {
-            console.error("Failed to load team.json", err);
-            return [];
-          }),
-          fetch("Faculty co  ord/faculty.json").then(res => res.json()).catch(err => {
-            console.error("Failed to load faculty.json", err);
-            return [];
-          }),
-        ]).then(([team, faculty]) => {
-          peerCoordinators = team;
-          facultyData = faculty;
-          populateDepts();
-          filterAll();
-        });
-
-        searchInput.addEventListener("input", filterAll);
-        deptFilter.addEventListener("change", filterAll);
-        hostelFilter.addEventListener("change", filterAll);
-        langFilter.addEventListener("change", filterAll);
-
-        // Counsellor schedule PDF modal, opened from the "View Full Schedule"
-        // button in the Department & Hostel Professional Counsellors banner.
-        const scheduleModal = document.getElementById("schedule-modal");
-        const scheduleBtn = document.getElementById("view-schedule-btn");
-        const scheduleClose = document.getElementById("schedule-modal-close");
-
-        if (scheduleBtn && scheduleModal) {
-          const openSchedule = () => {
-            scheduleModal.classList.remove("hidden");
-            scheduleModal.classList.add("flex");
-          };
-          const closeSchedule = () => {
-            scheduleModal.classList.add("hidden");
-            scheduleModal.classList.remove("flex");
-          };
-
-          scheduleBtn.addEventListener("click", openSchedule);
-          scheduleClose.addEventListener("click", closeSchedule);
-          scheduleModal.addEventListener("click", (e) => {
-            if (e.target === scheduleModal) closeSchedule();
-          });
-          document.addEventListener("keydown", (e) => {
-            if (e.key === "Escape" && !scheduleModal.classList.contains("hidden")) closeSchedule();
-          });
-        }
-      })();
-    </script>
+    
   </body>
 </html>

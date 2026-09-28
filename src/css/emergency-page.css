@@ -1,0 +1,21 @@
+.glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(129, 85, 24, 0.1);
+        }
+        
+        .campus-divider {
+            height: 80px;
+            width: 100%;
+            mask-image: linear-gradient(to right, transparent, black, transparent);
+            opacity: 0.1;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #815518 0%, #c48f4d 100%);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }

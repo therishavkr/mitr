@@ -1,9 +1,8 @@
 // Shared "Book a Session" modal. Any page that loads this file gets it: put
 // `data-open-booking` on a button and that button opens the dialog.
 //
-// No backend or storage is involved: submitting opens a pre-filled Gmail
-// compose window addressed to the chosen venue, and the visitor sends it
-// themselves from their own inbox.
+// Confirm Request opens a Gmail compose draft. Nothing is sent until the
+// visitor clicks Send in their own mailbox.
 //
 // The markup used to be copied into each page, which left three versions that
 // had already drifted apart in styling — and the copy on the directory page was
@@ -33,15 +32,29 @@
         '    <div class="flex items-center justify-between pb-4 border-b border-outline-variant/30 mb-4">',
         '      <div class="flex items-center gap-2.5 text-primary">',
         '        <span class="material-symbols-outlined text-2xl">event_available</span>',
-        '        <h3 class="text-2xl font-bold" id="booking-modal-title" style="font-family:\'Newsreader\',serif">Book a Session</h3>',
+        '        <h3 class="text-2xl font-bold font-newsreader" id="booking-modal-title">Book a Session</h3>',
         '      </div>',
         '      <button id="booking-modal-close" type="button" aria-label="Close"',
         '              class="text-outline hover:text-on-surface p-1 rounded-full">',
         '        <span class="material-symbols-outlined text-2xl">close</span>',
         '      </button>',
         '    </div>',
-        '    <p class="text-sm text-on-surface-variant mb-4">Choose a date, time, and venue that works for you.</p>',
+        '    <p class="text-sm text-on-surface-variant mb-4">Choose a date, time, and venue. Gmail will open a draft — review it and click Send.</p>',
         '    <form class="space-y-4" id="booking-form">',
+        '      <div class="mitr-hp" aria-hidden="true">',
+        '        <label for="booking-company">Company</label>',
+        '        <input id="booking-company" name="company" type="text" tabindex="-1" autocomplete="off">',
+        '      </div>',
+        '      <div>',
+        '        <label class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1" for="booking-name">Your name</label>',
+        '        <input id="booking-name" name="name" type="text" required maxlength="120" autocomplete="name"',
+        '               class="w-full rounded-xl border-outline-variant bg-surface-container-low px-4 py-2.5 text-sm focus:border-primary focus:ring-primary">',
+        '      </div>',
+        '      <div>',
+        '        <label class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1" for="booking-email">IITM email</label>',
+        '        <input id="booking-email" name="email" type="email" required maxlength="120" autocomplete="email" placeholder="you@smail.iitm.ac.in"',
+        '               class="w-full rounded-xl border-outline-variant bg-surface-container-low px-4 py-2.5 text-sm focus:border-primary focus:ring-primary">',
+        '      </div>',
         '      <div>',
         '        <label class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1" for="booking-date">Date</label>',
         '        <input id="booking-date" name="date" type="date" required',
@@ -101,6 +114,9 @@
         var timeInput = document.getElementById('booking-time');
         var venueInput = document.getElementById('booking-venue');
         var messageInput = document.getElementById('booking-message');
+        var nameInput = document.getElementById('booking-name');
+        var emailInput = document.getElementById('booking-email');
+        var honeyInput = document.getElementById('booking-company');
         var errorEl = document.getElementById('booking-error');
         var successEl = document.getElementById('booking-success');
 
@@ -197,20 +213,37 @@
                 return;
             }
 
+            if (honeyInput && honeyInput.value) {
+                closeModal();
+                return;
+            }
+
+            var nameVal = nameInput ? nameInput.value.trim() : '';
+            var emailVal = emailInput ? emailInput.value.trim() : '';
             var messageVal = messageInput ? messageInput.value.trim() : '';
+            if (!nameVal || !emailVal) {
+                errorEl.textContent = 'Please enter your name and IITM email.';
+                errorEl.classList.remove('hidden');
+                return;
+            }
+            if (window.isSafeEmail && !window.isSafeEmail(emailVal)) {
+                errorEl.textContent = 'Please use a valid IITM email address.';
+                errorEl.classList.remove('hidden');
+                return;
+            }
 
             var subject = 'Counselling Session Request via MITR Website — '
                 + formatDateForEmail(dateVal) + ', ' + venueVal;
 
-            var body = 'Hello,\n\n' +
-                'I am a member of the IIT Madras campus community and I am reaching out '
-                + 'because I would like support for my emotional wellbeing. I am requesting '
-                + 'a counselling session at the slot below.\n\n' +
-                'Requested date:  ' + formatDateForEmail(dateVal) + '\n' +
-                'Requested time:  ' + (timeVal
+            var body = 'Hello,\n\n'
+                + 'I would like to request a counselling session.\n\n'
+                + 'Name:  ' + nameVal + '\n'
+                + 'Email:  ' + emailVal + '\n'
+                + 'Requested date:  ' + formatDateForEmail(dateVal) + '\n'
+                + 'Requested time:  ' + (timeVal
                     ? formatTimeForEmail(timeVal)
-                    : 'No specific time — any slot that works for you') + '\n' +
-                'Preferred venue: ' + venueVal + '\n\n';
+                    : 'No specific time — any slot that works for you') + '\n'
+                + 'Preferred venue: ' + venueVal + '\n\n';
 
             if (messageVal) {
                 body += 'What I would like you to know beforehand:\n'
@@ -218,27 +251,19 @@
             }
 
             body += 'Please confirm whether this slot works, or suggest the nearest '
-                + 'available one. If this request needs to be redirected to a different '
-                + 'desk, kindly let me know.\n\n' +
-                'Thank you for your time and support.\n\n' +
-                '—\n' +
-                'Sent from the Team MITR wellness portal.\n' +
-                'This request was submitted through the website booking form and is '
-                + 'awaiting confirmation.';
+                + 'available one.\n\n'
+                + 'Thank you.\n\n'
+                + '—\n'
+                + 'Draft opened from the Team MITR wellness portal.';
 
-            var gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1'
-                + '&to=' + encodeURIComponent(recipient)
-                + '&su=' + encodeURIComponent(subject)
-                + '&body=' + encodeURIComponent(body);
-
-            // Opened synchronously in response to the click, so it isn't
-            // blocked as an unrequested popup.
-            window.open(gmailUrl, '_blank');
+            if (typeof window.openGmailCompose === 'function') {
+                window.openGmailCompose(recipient, subject, body);
+            }
 
             form.classList.add('hidden');
-            successEl.textContent = 'Opening Gmail with your request filled in — just hit send from there.';
+            successEl.textContent = 'Gmail opened with your draft. Click Send there to submit the request.';
             successEl.classList.remove('hidden');
-            setTimeout(closeModal, 1800);
+            setTimeout(closeModal, 2200);
         });
     }
 

@@ -15,23 +15,94 @@
 //      only some define `body-md` — so a token used here would silently collapse
 //      to nothing on the pages that lack it.
 //   2. Paths are resolved against wherever this script was loaded from, so the
-//      copy in "Faculty co  ord/" gets its ../ prefixes without extra config.
+//      copy in "pages/" gets its ../ prefixes without extra config.
 //
-// The Tailwind Play CDN watches the DOM, so classes on injected markup are
-// generated just like the ones present at parse time.
+// The compiled Tailwind CSS (src/css/tailwind.min.css) scans this file, so class
+// names here must be complete string literals — do not build class names by
+// concatenation, or they will be missing from the production stylesheet.
 (function () {
     'use strict';
 
     // Where the site root is, relative to the current page. Taken from this
-    // script's own src ("../site-chrome.js" -> "../"), so a page in a
+    // script's own src ("../src/js/site-chrome.js" -> "../"), so a page in a
     // subdirectory needs no configuration.
     var BASE = (function () {
         var script = document.currentScript;
         if (!script) return '';
         var src = script.getAttribute('src') || '';
-        return src.replace(/site-chrome\.js.*$/, '');
+        return src.replace(/src\/js\/site-chrome\.js.*$/, '');
     })();
 
+
+    window.escapeHtml = function (value) {
+        return String(value == null ? '' : value)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#39;');
+    };
+
+    window.isSafeEmail = function (value) {
+        return /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(String(value || '').trim());
+    };
+
+    window.mailtoHref = function (value) {
+        return window.isSafeEmail(value) ? 'mailto:' + String(value).trim() : '#';
+    };
+
+    window.telHref = function (value) {
+        var digits = String(value == null ? '' : value).replace(/\D/g, '');
+        if (digits.length === 12 && digits.indexOf('91') === 0) return 'tel:+' + digits;
+        if (digits.length === 11 && digits.charAt(0) === '0') return 'tel:+91' + digits.slice(1);
+        if (digits.length === 10) return 'tel:+91' + digits;
+        return '#';
+    };
+
+    window.isSafeLocalPdf = function (value) {
+        var name = String(value || '');
+        return /^[A-Za-z0-9][A-Za-z0-9 ._()-]*\.pdf$/i.test(name)
+            && name.indexOf('..') === -1
+            && name.indexOf('/') === -1
+            && name.indexOf('\\') === -1;
+    };
+
+    window.isSafeImageFile = function (value) {
+        var name = String(value || '');
+        return /^[A-Za-z0-9][A-Za-z0-9 ._()-]*\.(jpe?g|png|webp|gif)$/i.test(name)
+            && name.indexOf('..') === -1
+            && name.indexOf('/') === -1
+            && name.indexOf('\\') === -1;
+    };
+
+    window.openGmailCompose = function (to, subject, body) {
+        var recipients = String(to || '').split(',').map(function (part) { return part.trim(); });
+        if (!recipients.length || !recipients.every(window.isSafeEmail)) return;
+        var url = 'https://mail.google.com/mail/?view=cm&fs=1'
+            + '&to=' + encodeURIComponent(recipients.join(','))
+            + '&su=' + encodeURIComponent(subject || '')
+            + '&body=' + encodeURIComponent(body || '');
+        if (url.indexOf('https://mail.google.com/mail/?view=cm') !== 0) return;
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+
+    window.MITR_PLACEHOLDER_IMG = 'data:image/svg+xml,' + encodeURIComponent(
+        '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600">'
+        + '<rect width="100%" height="100%" fill="#eae7e7"/>'
+        + '<text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#815518" font-family="sans-serif" font-size="28">No Image</text>'
+        + '</svg>'
+    );
+
+    window.bindImageFallbacks = function (root) {
+        if (!root) return;
+        var imgs = root.querySelectorAll('img');
+        Array.prototype.forEach.call(imgs, function (img) {
+            img.addEventListener('error', function onErr() {
+                img.removeEventListener('error', onErr);
+                img.src = window.MITR_PLACEHOLDER_IMG;
+            });
+        });
+    };
 
     var DOST_URL = 'https://dost.iitm.ac.in';
     var CONTACT_EMAIL = 'mitrevents@smail.iitm.ac.in';
@@ -59,7 +130,7 @@
         return external ? href : BASE + href;
     }
 
-    // A directory page nested under "Faculty co  ord/" is still the Contact Us
+    // A directory page nested under "pages/" is still the Contact Us
     // section, so the basename alone is enough to pick the active link.
     function activeKey() {
         var file = window.location.pathname.split('/').pop() || 'index.html';
@@ -90,7 +161,7 @@
                     : underline + ' text-on-surface-variant hover:text-primary after:w-0 hover:after:w-full';
             }
             return '<a href="' + url(item.href, item.external) + '"'
-                + (item.external ? ' target="_blank" rel="noopener"' : '')
+                + (item.external ? ' target="_blank" rel="noopener noreferrer"' : '')
                 + (isActive ? ' aria-current="page"' : '')
                 + ' class="' + cls + '">' + item.label + '</a>';
         }).join('');
@@ -101,9 +172,9 @@
         '<header class="fixed top-0 z-50 w-full bg-surface/60 backdrop-blur-md border-b border-transparent transition-all duration-500 h-20" id="main-header">' +
           '<div class="flex justify-between items-center w-full px-3 sm:px-6 lg:px-16 max-w-screen-2xl mx-auto h-full">' +
             '<a href="' + url('index.html') + '" class="flex items-center gap-1.5 sm:gap-4 min-w-0">' +
-              '<img alt="IIT Madras Logo" class="h-7 sm:h-9 md:h-12 w-auto shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAW1n8lOW9_eqQl9UfG96njTZrftuphW1MbaA6n6q1Xcy5pzrYEkSKoxllnCHXsVxeDOGYc-JXXD77-moN7w4CbZ3yPv9ecW6vxl6JiHqJAFx9TBBq1iwPcUO9NK_aquo5q3H_qOEVmu9pzQcTOKAh6no-dPiiJmo75zCY8EUPomFxqW5rAuUPOh9Iiv1lhD_XOJxbe4jXwJjoXUfBoZGKCdO6MsaoOb_Go1HbOQleX7Y8ZWC_kwvzYvLlOnD8yTVR4">' +
+              '<img alt="IIT Madras Logo" class="h-7 sm:h-9 md:h-12 w-auto shrink-0" src="' + BASE + 'assets/brand/iitmlogo.svg">' +
               '<span class="hidden sm:block h-8 sm:h-10 w-px bg-outline-variant/40 shrink-0"></span>' +
-              '<img alt="Team MITR" class="h-7 sm:h-9 md:h-12 w-auto shrink-0" src="' + BASE + 'mitr-logo.png">' +
+              '<img alt="Team MITR" class="h-7 sm:h-9 md:h-12 w-auto shrink-0" src="' + BASE + 'assets/brand/mitr-logo.png">' +
             '</a>' +
             // The full link row (5 links) plus the confidential badge, Support
             // button and DOST logo don't comfortably fit until genuine
@@ -122,8 +193,8 @@
                 'Support' +
                 '<span class="xl:hidden absolute -top-0.5 -right-0.5 w-2.5 h-2.5 rounded-full bg-secondary animate-pulse ring-2 ring-surface" aria-hidden="true"></span>' +
               '</button>' +
-              '<a href="' + DOST_URL + '" target="_blank" rel="noopener" class="shrink-0">' +
-                '<img src="' + BASE + 'dostiitmlogo.svg" alt="Dost IITM" class="h-7 sm:h-10 xl:h-12 w-auto cursor-pointer hover:opacity-70 transition-opacity">' +
+              '<a href="' + DOST_URL + '" target="_blank" rel="noopener noreferrer" class="shrink-0">' +
+                '<img src="' + BASE + 'assets/brand/dostiitmlogo.svg" alt="Dost IITM" class="h-7 sm:h-10 xl:h-12 w-auto cursor-pointer hover:opacity-70 transition-opacity">' +
               '</a>' +
               '<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="xl:hidden flex items-center justify-center w-9 h-9 sm:w-11 sm:h-11 -mr-1 sm:-mr-2 rounded-full text-primary hover:bg-primary/5 transition-colors shrink-0" id="mobile-menu-btn" type="button">' +
                 '<span class="material-symbols-outlined text-2xl sm:text-3xl">menu</span>' +
@@ -144,7 +215,7 @@
         var link = 'text-on-surface-variant hover:text-secondary transition-colors hover:underline';
         var links = NAV.map(function (item) {
             return '<a class="' + link + '" href="' + url(item.href, item.external) + '"'
-                + (item.external ? ' target="_blank" rel="noopener"' : '')
+                + (item.external ? ' target="_blank" rel="noopener noreferrer"' : '')
                 + '>' + item.label + '</a>';
         }).join('');
 
@@ -157,7 +228,7 @@
             // Logo only — the mark already carries the wordmark and the "In need
             // and indeed for you" line, so a repeated "IITM MITR" heading beside
             // it was saying the same thing twice.
-            '<img alt="Team MITR — In need and indeed for you" class="h-20 w-auto" src="' + BASE + 'mitr-logo.png">' +
+            '<img alt="Team MITR — In need and indeed for you" class="h-20 w-auto" src="' + BASE + 'assets/brand/mitr-logo.png">' +
             '<nav class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-base" aria-label="Footer">' +
               links +
               // Opens the feedback.js modal (mails the team + maintainers) rather
@@ -169,9 +240,9 @@
             '<p class="text-sm text-on-surface-variant text-center">&copy; 2026 Indian Institute of Technology Madras. All rights reserved.' +
               '<span class="mx-1.5 opacity-60">&middot;</span>This site does not collect any of your data.</p>' +
             '<div class="flex gap-6 text-on-surface-variant">' +
-              '<a href="' + INSTAGRAM_URL + '" target="_blank" rel="noopener" aria-label="Team MITR on Instagram" class="hover:text-primary transition-colors">' + INSTAGRAM_SVG + '</a>' +
-              '<a href="' + LINKEDIN_URL + '" target="_blank" rel="noopener" aria-label="Team MITR on LinkedIn" class="hover:text-primary transition-colors">' + LINKEDIN_SVG + '</a>' +
-              '<a href="' + DOST_URL + '" target="_blank" rel="noopener" aria-label="DoSt IIT Madras" class="hover:text-primary transition-colors"><span class="material-symbols-outlined">public</span></a>' +
+              '<a href="' + INSTAGRAM_URL + '" target="_blank" rel="noopener noreferrer" aria-label="Team MITR on Instagram" class="hover:text-primary transition-colors">' + INSTAGRAM_SVG + '</a>' +
+              '<a href="' + LINKEDIN_URL + '" target="_blank" rel="noopener noreferrer" aria-label="Team MITR on LinkedIn" class="hover:text-primary transition-colors">' + LINKEDIN_SVG + '</a>' +
+              '<a href="' + DOST_URL + '" target="_blank" rel="noopener noreferrer" aria-label="DoSt IIT Madras" class="hover:text-primary transition-colors"><span class="material-symbols-outlined">public</span></a>' +
               '<a href="mailto:' + CONTACT_EMAIL + '" aria-label="Email Team MITR" class="hover:text-primary transition-colors"><span class="material-symbols-outlined">alternate_email</span></a>' +
             '</div>' +
           '</div>' +
@@ -212,7 +283,7 @@
         '     class="hidden fixed inset-0 z-[100] bg-black/50 backdrop-blur-sm items-center justify-center p-6">' +
           '<div class="bg-surface rounded-3xl shadow-2xl w-full max-w-md p-8 max-h-[85vh] overflow-y-auto">' +
             '<div class="flex items-start justify-between gap-4 mb-2">' +
-              '<h3 class="text-2xl font-bold text-on-surface" id="sos-modal-title" style="font-family:\'Newsreader\',serif">Call for help</h3>' +
+              '<h3 class="text-2xl font-bold text-on-surface font-newsreader" id="sos-modal-title">Call for help</h3>' +
               '<button id="sos-modal-close" type="button" aria-label="Close"' +
               '        class="material-symbols-outlined text-on-surface-variant hover:text-primary leading-none">close</button>' +
             '</div>' +

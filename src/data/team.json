@@ -6,7 +6,11 @@
     "email": "ed22b079@smail.iitm.ac.in",
     "department": "Engineering Design",
     "hostel": "Ganga",
-    "language": ["English", "Hindi", "Chhattisgarhi"]
+    "language": [
+      "English",
+      "Hindi",
+      "Chhattisgarhi"
+    ]
   },
   {
     "name": "Sumit Prakash",
@@ -15,7 +19,10 @@
     "email": "ce23b118@smail.iitm.ac.in",
     "department": "Civil Engineering",
     "hostel": "Godavari",
-    "language": ["English", "Hindi"]
+    "language": [
+      "English",
+      "Hindi"
+    ]
   },
   {
     "name": "Prasheel Mathray",
@@ -24,16 +31,23 @@
     "email": "na24b039@smail.iitm.ac.in",
     "department": "Naval Architecture and Ocean Engineering",
     "hostel": "Ganga",
-    "language": ["English", "Telugu", "Hindi"]
+    "language": [
+      "English",
+      "Telugu",
+      "Hindi"
+    ]
   },
   {
     "name": "Madhavi Avala",
     "designation": "Design Core",
     "rollNumber": "BS23B009",
     "email": "bs23b009@smail.iitm.ac.in",
-    "department": "Bio-Technology",
+    "department": "Biotechnology",
     "hostel": "Sharavati",
-    "language": ["English", "Telugu"]
+    "language": [
+      "English",
+      "Telugu"
+    ]
   },
   {
     "name": "Addala Pravallika",
@@ -42,7 +56,10 @@
     "email": "ch23b003@smail.iitm.ac.in",
     "department": "Chemical Engineering",
     "hostel": "Bhadra",
-    "language": ["English", "Telugu"]
+    "language": [
+      "English",
+      "Telugu"
+    ]
   },
   {
     "name": "Russell",
@@ -51,7 +68,10 @@
     "email": "ce23b106@smail.iitm.ac.in",
     "department": "Civil Engineering",
     "hostel": "Godavari",
-    "language": ["English", "Hindi"]
+    "language": [
+      "English",
+      "Hindi"
+    ]
   },
   {
     "name": "Swati",
@@ -60,6 +80,559 @@
     "email": "na24b033@smail.iitm.ac.in",
     "department": "Naval Architecture and Ocean Engineering",
     "hostel": "Bhadra",
-    "language": ["English", "Hindi"]
+    "language": [
+      "English",
+      "Hindi"
+    ]
+  },
+  {
+    "name": "Royce Mathai Rojimon",
+    "designation": "Core",
+    "rollNumber": "AE25D401",
+    "email": "ae25d401@smail.iitm.ac.in",
+    "department": "Aerospace Engineering",
+    "hostel": "Mahanadi",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Balam Sai Durga Mahesh",
+    "designation": "Super Coordinator",
+    "rollNumber": "AE24B031",
+    "email": "ae24b031@smail.iitm.ac.in",
+    "department": "Aerospace Engineering",
+    "hostel": "Narmada",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Polisetti Jathin Rishikeswar",
+    "designation": "Super Coordinator",
+    "rollNumber": "MD24B030",
+    "email": "md24b030@smail.iitm.ac.in",
+    "department": "Medical Sciences and Technology",
+    "hostel": "Tapti",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Satya Sree",
+    "designation": "Super Coordinator",
+    "rollNumber": "ME24B037",
+    "email": "me24b037@smail.iitm.ac.in",
+    "department": "Mechanical Engineering",
+    "hostel": "Bhadra",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "N. Jahnavi Devi",
+    "designation": "Super Coordinator",
+    "rollNumber": "NA24B056",
+    "email": "na24b056@smail.iitm.ac.in",
+    "department": "Naval Architecture and Ocean Engineering",
+    "hostel": "Bhadra",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Sanika Shinde",
+    "designation": "Super Coordinator",
+    "rollNumber": "HS26H012",
+    "email": "hs26h012@smail.iitm.ac.in",
+    "department": "Humanities and Social Sciences",
+    "hostel": "Sabarmati",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Monika K P",
+    "designation": "Super Coordinator",
+    "rollNumber": "ME25B074",
+    "email": "me25b074@smail.iitm.ac.in",
+    "department": "Mechanical Engineering",
+    "hostel": "Sharavati",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Ajay Sankar T",
+    "designation": "Super Coordinator",
+    "rollNumber": "ME25B012",
+    "email": "me25b012@smail.iitm.ac.in",
+    "department": "Mechanical Engineering",
+    "hostel": "Cauvery",
+    "language": [
+      "English","Tamil","Hindi"
+    ]
+  },
+  {
+    "name": "Revanth Jadi",
+    "designation": "Super Coordinator",
+    "rollNumber": "AE24B035",
+    "email": "ae24b035@smail.iitm.ac.in",
+    "department": "Aerospace Engineering",
+    "hostel": "Narmada",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "L Girija Sankar",
+    "designation": "Super Coordinator",
+    "rollNumber": "AE24B013",
+    "email": "ae24b013@smail.iitm.ac.in",
+    "department": "Aerospace Engineering",
+    "hostel": "Narmada",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Russell Raju Monteiro",
+    "designation": "Super Coordinator",
+    "rollNumber": "AM25B020",
+    "email": "am25b020@smail.iitm.ac.in",
+    "department": "Applied Mechanics and Biomedical Engineering",
+    "hostel": "Cauvery",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Aditya Baranwal",
+    "designation": "Super Coordinator",
+    "rollNumber": "CE25B008",
+    "email": "ce25b008@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "Cauvery",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Killi Vishnu",
+    "designation": "Super Coordinator",
+    "rollNumber": "NA24B044",
+    "email": "na24b044@smail.iitm.ac.in",
+    "department": "Naval Architecture and Ocean Engineering",
+    "hostel": "Ganga",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Rishav Kumar",
+    "designation": "Super Coordinator",
+    "rollNumber": "CE24B102",
+    "email": "ce24b102@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "Jamuna",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Jagan Naik",
+    "designation": "Super Coordinator",
+    "rollNumber": "AE24B019",
+    "email": "ae24b019@smail.iitm.ac.in",
+    "department": "Aerospace Engineering",
+    "hostel": "Narmada",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Chekka Devanandini Reddy",
+    "designation": "Super Coordinator",
+    "rollNumber": "HS25H029",
+    "email": "hs25h029@smail.iitm.ac.in",
+    "department": "Humanities and Social Sciences",
+    "hostel": "Sharavati",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Saranya K S",
+    "designation": "Super Coordinator",
+    "rollNumber": "BT26S010",
+    "email": "bt26s010@smail.iitm.ac.in",
+    "department": "Biotechnology",
+    "hostel": "Tunga",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Shalini R",
+    "designation": "Super Coordinator",
+    "rollNumber": "MD26D021",
+    "email": "md26d021@smail.iitm.ac.in",
+    "department": "Medical Sciences and Technology",
+    "hostel": "Tunga",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Pradhap D",
+    "designation": "Super Coordinator",
+    "rollNumber": "ED25B040",
+    "email": "ed25b040@smail.iitm.ac.in",
+    "department": "Engineering Design",
+    "hostel": "Cauvery",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Abhay K",
+    "designation": "Coordinator",
+    "rollNumber": "ID26S004",
+    "email": "id26s004@smail.iitm.ac.in",
+    "department": "Interdisciplinary Studies",
+    "hostel": "Krishna",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Anul Kunwar",
+    "designation": "Coordinator",
+    "rollNumber": "CE25M806",
+    "email": "ce25m806@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "Mahanadi",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "D. Gireesh Kumar",
+    "designation": "Coordinator",
+    "rollNumber": "CE25S010",
+    "email": "ce25s010@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "Tamraparani",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Abhinay Anand",
+    "designation": "Coordinator",
+    "rollNumber": "CE25M802",
+    "email": "ce25m802@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "Mahanadi",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Varun Khandelwal",
+    "designation": "Coordinator",
+    "rollNumber": "NA25B075",
+    "email": "na25b075@smail.iitm.ac.in",
+    "department": "Naval Architecture and Ocean Engineering",
+    "hostel": "Cauvery",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Dabasish Bhowmick Joy",
+    "designation": "Coordinator",
+    "rollNumber": "ME25S804",
+    "email": "me25s804@smail.iitm.ac.in",
+    "department": "Mechanical Engineering",
+    "hostel": "Mahanadi",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Kumari Richa Sinha",
+    "designation": "Coordinator",
+    "rollNumber": "PH25B007",
+    "email": "ph25b007@smail.iitm.ac.in",
+    "department": "Physics",
+    "hostel": "Sharavati",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Ankit Kumar",
+    "designation": "Coordinator",
+    "rollNumber": "OE26M002",
+    "email": "oe26m002@smail.iitm.ac.in",
+    "department": "Ocean Engineering",
+    "hostel": "Mandakini",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Sanjai S P",
+    "designation": "Coordinator",
+    "rollNumber": "NA24B018",
+    "email": "na24b018@smail.iitm.ac.in",
+    "department": "Naval Architecture and Ocean Engineering",
+    "hostel": "Ganga",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Suggu Prem Kumar",
+    "designation": "Coordinator",
+    "rollNumber": "CE23B117",
+    "email": "ce23b117@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "Godavari",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Kolaka John Joseph",
+    "designation": "Coordinator",
+    "rollNumber": "EE24B031",
+    "email": "ee24b031@smail.iitm.ac.in",
+    "department": "Electrical Engineering",
+    "hostel": "Saraswathi",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Stephen Babu",
+    "designation": "Coordinator",
+    "rollNumber": "ID24D004",
+    "email": "id24d004@smail.iitm.ac.in",
+    "department": "Interdisciplinary Studies",
+    "hostel": "G7 2A Quarters",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Avichal Singh",
+    "designation": "Coordinator",
+    "rollNumber": "ME26D900",
+    "email": "me26d900@smail.iitm.ac.in",
+    "department": "Mechanical Engineering",
+    "hostel": "Pampa",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Sudhanshu Shekhar Kanha",
+    "designation": "Coordinator",
+    "rollNumber": "OE26D010",
+    "email": "oe26d010@smail.iitm.ac.in",
+    "department": "Ocean Engineering",
+    "hostel": "Pampa",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Vidisha",
+    "designation": "Coordinator",
+    "rollNumber": "MD25B033",
+    "email": "md25b033@smail.iitm.ac.in",
+    "department": "Medical Sciences and Technology",
+    "hostel": "Sharavati",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Shreya Som",
+    "designation": "Coordinator",
+    "rollNumber": "MAS25S009",
+    "email": "mas25s009@smail.iitm.ac.in",
+    "department": "Mathematics",
+    "hostel": "Tunga",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "P. Nikhil",
+    "designation": "Coordinator",
+    "rollNumber": "AE25B039",
+    "email": "ae25b039@smail.iitm.ac.in",
+    "department": "Aerospace Engineering",
+    "hostel": "Cauvery",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Bibhu Rawat",
+    "designation": "Coordinator",
+    "rollNumber": "CS25D012",
+    "email": "cs25d012@smail.iitm.ac.in",
+    "department": "Computer Science and Engineering",
+    "hostel": "Na",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Rohit Thakur",
+    "designation": "Coordinator",
+    "rollNumber": "CE26S007",
+    "email": "ce26s007@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "Krishna",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Beemanapalli Siddharth",
+    "designation": "Coordinator",
+    "rollNumber": "EE25B024",
+    "email": "ee25b024@smail.iitm.ac.in",
+    "department": "Electrical Engineering",
+    "hostel": "Brahmaputra",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Saikumar V",
+    "designation": "Coordinator",
+    "rollNumber": "EE21D206",
+    "email": "ee21d206@smail.iitm.ac.in",
+    "department": "Electrical Engineering",
+    "hostel": "Day Scholar",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Fatmata Jalloh",
+    "designation": "Coordinator",
+    "rollNumber": "CE25M811",
+    "email": "ce25m811@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "Sabarmati",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Bharathi Sankar R",
+    "designation": "Coordinator",
+    "rollNumber": "MD24B006",
+    "email": "md24b006@smail.iitm.ac.in",
+    "department": "Medical Sciences and Technology",
+    "hostel": "Tapti",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Akhilan S K",
+    "designation": "Coordinator",
+    "rollNumber": "MD24B001",
+    "email": "md24b001@smail.iitm.ac.in",
+    "department": "Medical Sciences and Technology",
+    "hostel": "Tapti",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Surya",
+    "designation": "Coordinator",
+    "rollNumber": "MA26D009",
+    "email": "ma26d009@smail.iitm.ac.in",
+    "department": "Mathematics",
+    "hostel": "Pampa",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "R Shankar",
+    "designation": "Coordinator",
+    "rollNumber": "CY26C048",
+    "email": "cy26c048@smail.iitm.ac.in",
+    "department": "Chemistry",
+    "hostel": "Mandakini",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Piyush Olivkar",
+    "designation": "Coordinator",
+    "rollNumber": "AM23D017",
+    "email": "am23d017@smail.iitm.ac.in",
+    "department": "Applied Mechanics and Biomedical Engineering",
+    "hostel": "G5 Quarters",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Vallabh Mahajan",
+    "designation": "Coordinator",
+    "rollNumber": "CE23B122",
+    "email": "ce23b122@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "Godavari",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Vidhya Radhakrishnan",
+    "designation": "Coordinator",
+    "rollNumber": "AE24D034",
+    "email": "ae24d034@smail.iitm.ac.in",
+    "department": "Aerospace Engineering",
+    "hostel": "G2",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Prachi",
+    "designation": "Coordinator",
+    "rollNumber": "EP25B025",
+    "email": "ep25b025@smail.iitm.ac.in",
+    "department": "Engineering Physics",
+    "hostel": "Sharavati",
+    "language": [
+      "English"
+    ]
+  },
+  {
+    "name": "Sabarishvar S S",
+    "designation": "Coordinator",
+    "rollNumber": "MM24B046",
+    "email": "mm24b046@smail.iitm.ac.in",
+    "department": "Metallurgical and Materials Engineering",
+    "hostel": "Godavari",
+    "language": [
+      "English"
+    ]
   }
 ]

@@ -1,8 +1,7 @@
 // Shared "Share Your Feedback" modal — same pattern as booking.js / coffee.js.
 //
-// No backend: submitting opens a pre-filled Gmail compose window addressed to
-// the MITR team inbox plus the two site maintainers, and the visitor sends it
-// themselves from their own account.
+// Send Feedback opens a Gmail compose draft. Nothing is sent until the
+// visitor clicks Send in their own mailbox.
 //
 //   <button data-open-feedback>   -> opens the dialog
 (function () {
@@ -27,7 +26,7 @@
         '    <div class="flex items-center justify-between pb-4 border-b border-outline-variant/30 mb-4">',
         '      <div class="flex items-center gap-2.5 text-primary">',
         '        <span class="material-symbols-outlined text-2xl">rate_review</span>',
-        '        <h3 class="text-2xl font-bold" id="feedback-modal-title" style="font-family:\'Newsreader\',serif">Share Your Feedback</h3>',
+        '        <h3 class="text-2xl font-bold font-newsreader" id="feedback-modal-title">Share Your Feedback</h3>',
         '      </div>',
         '      <button id="feedback-modal-close" type="button" aria-label="Close"',
         '              class="text-outline hover:text-on-surface p-1 rounded-full">',
@@ -36,6 +35,20 @@
         '    </div>',
         '    <p class="text-sm text-on-surface-variant mb-4">Tell us what is working, what is not, or what you would like to see.</p>',
         '    <form id="feedback-form" class="space-y-4">',
+        '      <div class="mitr-hp" aria-hidden="true">',
+        '        <label for="feedback-company">Company</label>',
+        '        <input id="feedback-company" name="company" type="text" tabindex="-1" autocomplete="off">',
+        '      </div>',
+        '      <div>',
+        '        <label for="feedback-name" class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Your name</label>',
+        '        <input type="text" id="feedback-name" required maxlength="120" autocomplete="name"',
+        '               class="w-full rounded-xl border-outline-variant bg-surface-container-low px-4 py-2.5 text-sm focus:border-primary focus:ring-primary">',
+        '      </div>',
+        '      <div>',
+        '        <label for="feedback-email" class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">IITM email</label>',
+        '        <input type="email" id="feedback-email" required maxlength="120" autocomplete="email" placeholder="you@smail.iitm.ac.in"',
+        '               class="w-full rounded-xl border-outline-variant bg-surface-container-low px-4 py-2.5 text-sm focus:border-primary focus:ring-primary">',
+        '      </div>',
         '      <div>',
         '        <label for="feedback-category" class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Category</label>',
         '        <select id="feedback-category"',
@@ -117,21 +130,26 @@
             }
             errorEl.classList.add('hidden');
 
+            var honey = (document.getElementById('feedback-company') || {}).value || '';
+            if (honey) {
+                close();
+                return;
+            }
+
+            var nameVal = ((document.getElementById('feedback-name') || {}).value || '').trim();
+            var emailVal = ((document.getElementById('feedback-email') || {}).value || '').trim();
             var category = categoryInput.value;
             var subject = 'MITR Website Feedback — ' + category;
-            var body = 'Hello Team MITR,\n\n' +
-                'Category: ' + category + '\n\n' +
-                messageVal + '\n\n' +
-                '—\nSent from the Team MITR wellness portal.';
+            var body = 'Hello Team MITR,\n\n'
+                + 'Name: ' + nameVal + '\n'
+                + 'Email: ' + emailVal + '\n'
+                + 'Category: ' + category + '\n\n'
+                + messageVal + '\n\n'
+                + '—\nDraft opened from the Team MITR wellness portal.';
 
-            var gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1' +
-                '&to=' + encodeURIComponent(RECIPIENTS.join(',')) +
-                '&su=' + encodeURIComponent(subject) +
-                '&body=' + encodeURIComponent(body);
-
-            // Opened synchronously in response to the submit, so it isn't
-            // blocked as an unrequested popup.
-            window.open(gmailUrl, '_blank');
+            if (typeof window.openGmailCompose === 'function') {
+                window.openGmailCompose(RECIPIENTS.join(','), subject, body);
+            }
             close();
         });
     }

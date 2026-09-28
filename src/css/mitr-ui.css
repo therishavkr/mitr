@@ -1,0 +1,15 @@
+.font-newsreader {
+  font-family: 'Newsreader', serif;
+}
+
+.icon-fill {
+  font-variation-settings: 'FILL' 1;
+}
+
+.mitr-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

@@ -2,9 +2,8 @@
 // Book a Session dialog in booking.js, and the same dialog behind "Talk to a
 // Mentor" on the home page.
 //
-// Like booking.js: no backend. Submitting opens a pre-filled Gmail compose
-// window addressed to the MITR team inbox, and the visitor sends it from their
-// own account.
+// Confirm Request opens a Gmail compose draft to the MITR team inbox.
+// Nothing is sent until the visitor clicks Send in their own mailbox.
 //
 // Requests always go to the team inbox, never to an individual. Students used
 // to be able to pick a specific coordinator from their directory card, which
@@ -36,7 +35,7 @@
         '    <div class="flex items-center justify-between pb-4 border-b border-outline-variant/30 mb-4">',
         '      <div class="flex items-center gap-2.5 text-primary">',
         '        <span class="material-symbols-outlined text-2xl">local_cafe</span>',
-        '        <h3 class="text-2xl font-bold" id="coffee-modal-title" style="font-family:\'Newsreader\',serif">Book a Coffee with MITR</h3>',
+        '        <h3 class="text-2xl font-bold font-newsreader" id="coffee-modal-title">Book a Coffee with MITR</h3>',
         '      </div>',
         '      <button id="coffee-modal-close" type="button" aria-label="Close"',
         '              class="text-outline hover:text-on-surface p-1 rounded-full">',
@@ -44,6 +43,20 @@
         '      </button>',
         '    </div>',
         '    <form id="coffee-form" class="space-y-4">',
+        '      <div class="mitr-hp" aria-hidden="true">',
+        '        <label for="coffee-company">Company</label>',
+        '        <input id="coffee-company" name="company" type="text" tabindex="-1" autocomplete="off">',
+        '      </div>',
+        '      <div>',
+        '        <label for="coffee-name" class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Your name</label>',
+        '        <input type="text" id="coffee-name" required maxlength="120" autocomplete="name"',
+        '               class="w-full rounded-xl border-outline-variant bg-surface-container-low px-4 py-2.5 text-sm focus:border-primary focus:ring-primary">',
+        '      </div>',
+        '      <div>',
+        '        <label for="coffee-email" class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">IITM email</label>',
+        '        <input type="email" id="coffee-email" required maxlength="120" autocomplete="email" placeholder="you@smail.iitm.ac.in"',
+        '               class="w-full rounded-xl border-outline-variant bg-surface-container-low px-4 py-2.5 text-sm focus:border-primary focus:ring-primary">',
+        '      </div>',
         '      <div>',
         '        <label for="coffee-peer" class="block text-xs font-bold uppercase tracking-wider text-on-surface-variant mb-1">Request goes to</label>',
         '        <input type="text" id="coffee-peer" readonly',
@@ -120,27 +133,33 @@
         form.addEventListener('submit', function (e) {
             e.preventDefault();
 
+            var honey = (document.getElementById('coffee-company') || {}).value || '';
+            if (honey) {
+                close();
+                return;
+            }
+
             var target = peerInput.value;
             var location = document.getElementById('coffee-location').value;
             var note = document.getElementById('coffee-note').value.trim();
+            var nameVal = ((document.getElementById('coffee-name') || {}).value || '').trim();
+            var emailVal = ((document.getElementById('coffee-email') || {}).value || '').trim();
 
             var subject = 'Book a Coffee with MITR — ' + target;
-            var body = 'Hello Team MITR,\n\n' +
-                'I would like to request a casual coffee chat as part of Book a Coffee with MITR!\n\n' +
-                'Preferred Spot: ' + location + '\n\n';
+            var body = 'Hello Team MITR,\n\n'
+                + 'I would like to request a casual coffee chat as part of Book a Coffee with MITR.\n\n'
+                + 'Name: ' + nameVal + '\n'
+                + 'Email: ' + emailVal + '\n'
+                + 'Request goes to: ' + target + '\n'
+                + 'Preferred Spot: ' + location + '\n\n';
 
             if (note) body += 'Note:\n' + note + '\n\n';
 
-            body += 'Looking forward to hearing from you!\n\nBest regards,\nIIT Madras Student';
+            body += 'Looking forward to hearing from you.\n\nBest regards,\n' + nameVal;
 
-            var gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1' +
-                '&to=' + encodeURIComponent(TEAM_INBOX) +
-                '&su=' + encodeURIComponent(subject) +
-                '&body=' + encodeURIComponent(body);
-
-            // Opened synchronously in response to the submit, so it isn't
-            // blocked as an unrequested popup.
-            window.open(gmailUrl, '_blank');
+            if (typeof window.openGmailCompose === 'function') {
+                window.openGmailCompose(TEAM_INBOX, subject, body);
+            }
             close();
         });
     }
