@@ -13,3 +13,15 @@
   height: 1px;
   overflow: hidden;
 }
+
+/* min-h-screen compiles to `min-height: 100vh`. Mobile browsers (notably
+   iOS Safari) size 100vh against the viewport with the address bar
+   hidden, so on first load (bar visible) a min-h-screen hero is taller
+   than what's actually visible — its CTA can sit just below the fold.
+   dvh tracks the real, current viewport, so swap it in where supported;
+   vh stays as the fallback for browsers (and print) without dvh. */
+@supports (height: 100dvh) {
+  .min-h-screen {
+    min-height: 100dvh;
+  }
+}

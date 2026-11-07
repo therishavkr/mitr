@@ -10,7 +10,8 @@
       "English",
       "Hindi",
       "Chhattisgarhi"
-    ]
+    ],
+    "image": "assets/images/core/rahul-kumar-mahamalla.webp"
   },
   {
     "name": "Sumit Prakash",
@@ -22,7 +23,8 @@
     "language": [
       "English",
       "Hindi"
-    ]
+    ],
+    "image": "assets/images/core/sumit-prakash.webp"
   },
   {
     "name": "Prasheel Mathray",
@@ -35,7 +37,8 @@
       "English",
       "Telugu",
       "Hindi"
-    ]
+    ],
+    "image": "assets/images/core/prasheel-mathray.webp"
   },
   {
     "name": "Madhavi Avala",
@@ -47,7 +50,8 @@
     "language": [
       "English",
       "Telugu"
-    ]
+    ],
+    "image": "assets/images/core/avala-madhavi.webp"
   },
   {
     "name": "Addala Pravallika",
@@ -59,7 +63,8 @@
     "language": [
       "English",
       "Telugu"
-    ]
+    ],
+    "image": "assets/images/core/addala-pravallika.webp"
   },
   {
     "name": "Russell",
@@ -71,7 +76,8 @@
     "language": [
       "English",
       "Hindi"
-    ]
+    ],
+    "image": "assets/images/core/russel.webp"
   },
   {
     "name": "Swati",
@@ -83,7 +89,8 @@
     "language": [
       "English",
       "Hindi"
-    ]
+    ],
+    "image": "assets/images/core/swati-dorugade.webp"
   },
   {
     "name": "Royce Mathai Rojimon",
@@ -94,7 +101,8 @@
     "hostel": "Mahanadi",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/royce-mathai-rojimon.webp"
   },
   {
     "name": "Balam Sai Durga Mahesh",
@@ -105,7 +113,8 @@
     "hostel": "Narmada",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/balam-sai-durga-mahesh.webp"
   },
   {
     "name": "Polisetti Jathin Rishikeswar",
@@ -116,7 +125,8 @@
     "hostel": "Tapti",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/polisetti-jathin-rishikeswar.webp"
   },
   {
     "name": "Satya Sree",
@@ -127,7 +137,8 @@
     "hostel": "Bhadra",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/satya-sree.webp"
   },
   {
     "name": "N. Jahnavi Devi",
@@ -138,7 +149,8 @@
     "hostel": "Bhadra",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/n-jahnavi-devi.webp"
   },
   {
     "name": "Sanika Shinde",
@@ -149,7 +161,8 @@
     "hostel": "Sabarmati",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/sanika-shinde.webp"
   },
   {
     "name": "Monika K P",
@@ -159,8 +172,10 @@
     "department": "Mechanical Engineering",
     "hostel": "Sharavati",
     "language": [
-      "English"
-    ]
+      "English",
+      "Kannada"
+    ],
+    "image": "assets/images/team/monika-k-p.webp"
   },
   {
     "name": "Ajay Sankar T",
@@ -170,8 +185,11 @@
     "department": "Mechanical Engineering",
     "hostel": "Cauvery",
     "language": [
-      "English","Tamil","Hindi"
-    ]
+      "English",
+      "Tamil",
+      "Hindi"
+    ],
+    "image": "assets/images/team/ajay-sankar-t.webp"
   },
   {
     "name": "Revanth Jadi",
@@ -181,8 +199,10 @@
     "department": "Aerospace Engineering",
     "hostel": "Narmada",
     "language": [
-      "English"
-    ]
+      "English",
+      "Telugu"
+    ],
+    "image": "assets/images/team/revanth-jadi.webp"
   },
   {
     "name": "L Girija Sankar",
@@ -193,7 +213,8 @@
     "hostel": "Narmada",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/l-girija-sankar.webp"
   },
   {
     "name": "Russell Raju Monteiro",
@@ -203,8 +224,11 @@
     "department": "Applied Mechanics and Biomedical Engineering",
     "hostel": "Cauvery",
     "language": [
-      "English"
-    ]
+      "English",
+      "Hindi",
+      "Marathi"
+    ],
+    "image": "assets/images/team/russell-raju-monteiro.webp"
   },
   {
     "name": "Aditya Baranwal",
@@ -215,7 +239,8 @@
     "hostel": "Cauvery",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/aditya-baranwal.webp"
   },
   {
     "name": "Killi Vishnu",
@@ -226,7 +251,8 @@
     "hostel": "Ganga",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/killi-vishnu.jpg"
   },
   {
     "name": "Rishav Kumar",
@@ -236,8 +262,12 @@
     "department": "Civil Engineering",
     "hostel": "Jamuna",
     "language": [
-      "English"
-    ]
+      "English",
+      "Hindi",
+      "Bhojpuri",
+      "Maithili"
+    ],
+    "image": "assets/images/team/rishav-kumar.webp"
   },
   {
     "name": "Jagan Naik",
@@ -248,7 +278,8 @@
     "hostel": "Narmada",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/jagan-naik.webp"
   },
   {
     "name": "Chekka Devanandini Reddy",
@@ -259,7 +290,8 @@
     "hostel": "Sharavati",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/chekka-devanandini-reddy.jpg"
   },
   {
     "name": "Saranya K S",
@@ -269,8 +301,11 @@
     "department": "Biotechnology",
     "hostel": "Tunga",
     "language": [
-      "English"
-    ]
+      "English",
+      "Tamil",
+      "Hindi"
+    ],
+    "image": "assets/images/team/saranya-k-s.webp"
   },
   {
     "name": "Shalini R",
@@ -280,8 +315,10 @@
     "department": "Medical Sciences and Technology",
     "hostel": "Tunga",
     "language": [
-      "English"
-    ]
+      "English",
+      "Tamil"
+    ],
+    "image": "assets/images/team/shalini-r.webp"
   },
   {
     "name": "Pradhap D",
@@ -291,8 +328,10 @@
     "department": "Engineering Design",
     "hostel": "Cauvery",
     "language": [
-      "English"
-    ]
+      "English",
+      "Tamil"
+    ],
+    "image": "assets/images/team/pradhap-d.webp"
   },
   {
     "name": "Abhay K",
@@ -303,7 +342,8 @@
     "hostel": "Krishna",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/abhay-k.jpg"
   },
   {
     "name": "Anul Kunwar",
@@ -313,8 +353,12 @@
     "department": "Civil Engineering",
     "hostel": "Mahanadi",
     "language": [
-      "English"
-    ]
+      "English",
+      "Hindi",
+      "Nepali",
+      "Telugu"
+    ],
+    "image": "assets/images/team/anul-kunwar.webp"
   },
   {
     "name": "D. Gireesh Kumar",
@@ -325,7 +369,8 @@
     "hostel": "Tamraparani",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/d-gireesh-kumar.webp"
   },
   {
     "name": "Abhinay Anand",
@@ -336,7 +381,8 @@
     "hostel": "Mahanadi",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/abhinay-anand.webp"
   },
   {
     "name": "Varun Khandelwal",
@@ -347,7 +393,8 @@
     "hostel": "Cauvery",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/varun-khandelwal.webp"
   },
   {
     "name": "Dabasish Bhowmick Joy",
@@ -358,7 +405,8 @@
     "hostel": "Mahanadi",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/dabasish-bhowmick-joy.jpg"
   },
   {
     "name": "Kumari Richa Sinha",
@@ -368,8 +416,10 @@
     "department": "Physics",
     "hostel": "Sharavati",
     "language": [
-      "English"
-    ]
+      "English",
+      "Hindi"
+    ],
+    "image": "assets/images/team/kumari-richa-sinha.webp"
   },
   {
     "name": "Ankit Kumar",
@@ -380,7 +430,8 @@
     "hostel": "Mandakini",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/ankit-kumar.webp"
   },
   {
     "name": "Sanjai S P",
@@ -391,7 +442,8 @@
     "hostel": "Ganga",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/sanjai-s-p.webp"
   },
   {
     "name": "Suggu Prem Kumar",
@@ -402,7 +454,8 @@
     "hostel": "Godavari",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/suggu-prem-kumar.webp"
   },
   {
     "name": "Kolaka John Joseph",
@@ -412,8 +465,10 @@
     "department": "Electrical Engineering",
     "hostel": "Saraswathi",
     "language": [
-      "English"
-    ]
+      "English",
+      "Tamil"
+    ],
+    "image": "assets/images/team/kolaka-john-joseph.webp"
   },
   {
     "name": "Stephen Babu",
@@ -423,8 +478,12 @@
     "department": "Interdisciplinary Studies",
     "hostel": "G7 2A Quarters",
     "language": [
-      "English"
-    ]
+      "English",
+      "Tamil",
+      "Hindi",
+      "Malayalam"
+    ],
+    "image": "assets/images/team/stephen-babu.webp"
   },
   {
     "name": "Avichal Singh",
@@ -434,8 +493,10 @@
     "department": "Mechanical Engineering",
     "hostel": "Pampa",
     "language": [
-      "English"
-    ]
+      "English",
+      "Hindi"
+    ],
+    "image": "assets/images/team/avichal-singh.webp"
   },
   {
     "name": "Sudhanshu Shekhar Kanha",
@@ -446,7 +507,8 @@
     "hostel": "Pampa",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/sudhanshu-shekhar-kanha.webp"
   },
   {
     "name": "Vidisha",
@@ -456,8 +518,10 @@
     "department": "Medical Sciences and Technology",
     "hostel": "Sharavati",
     "language": [
-      "English"
-    ]
+      "English",
+      "Hindi"
+    ],
+    "image": "assets/images/team/vidisha.webp"
   },
   {
     "name": "Shreya Som",
@@ -468,7 +532,8 @@
     "hostel": "Tunga",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/shreya-som.jpg"
   },
   {
     "name": "P. Nikhil",
@@ -478,8 +543,10 @@
     "department": "Aerospace Engineering",
     "hostel": "Cauvery",
     "language": [
-      "English"
-    ]
+      "English",
+      "Telugu"
+    ],
+    "image": "assets/images/team/p-nikhil.webp"
   },
   {
     "name": "Bibhu Rawat",
@@ -490,7 +557,8 @@
     "hostel": "Na",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/bibhu-rawat.jpg"
   },
   {
     "name": "Rohit Thakur",
@@ -500,8 +568,10 @@
     "department": "Civil Engineering",
     "hostel": "Krishna",
     "language": [
-      "English"
-    ]
+      "English",
+      "Hindi"
+    ],
+    "image": "assets/images/team/rohit-thakur.webp"
   },
   {
     "name": "Beemanapalli Siddharth",
@@ -512,7 +582,8 @@
     "hostel": "Brahmaputra",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/beemanapalli-siddharth.webp"
   },
   {
     "name": "Saikumar V",
@@ -522,8 +593,11 @@
     "department": "Electrical Engineering",
     "hostel": "Day Scholar",
     "language": [
-      "English"
-    ]
+      "English",
+      "Tamil",
+      "Telugu"
+    ],
+    "image": "assets/images/team/saikumar-v.webp"
   },
   {
     "name": "Fatmata Jalloh",
@@ -534,7 +608,8 @@
     "hostel": "Sabarmati",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/fatmata-jalloh.webp"
   },
   {
     "name": "Bharathi Sankar R",
@@ -544,8 +619,10 @@
     "department": "Medical Sciences and Technology",
     "hostel": "Tapti",
     "language": [
-      "English"
-    ]
+      "English",
+      "Tamil"
+    ],
+    "image": "assets/images/team/bharathi-sankar-r.webp"
   },
   {
     "name": "Akhilan S K",
@@ -555,8 +632,10 @@
     "department": "Medical Sciences and Technology",
     "hostel": "Tapti",
     "language": [
-      "English"
-    ]
+      "English",
+      "Tamil"
+    ],
+    "image": "assets/images/team/akhilan-s-k.webp"
   },
   {
     "name": "Surya",
@@ -566,8 +645,11 @@
     "department": "Mathematics",
     "hostel": "Pampa",
     "language": [
-      "English"
-    ]
+      "English",
+      "Hindi",
+      "Odia"
+    ],
+    "image": "assets/images/team/surya.webp"
   },
   {
     "name": "R Shankar",
@@ -577,8 +659,11 @@
     "department": "Chemistry",
     "hostel": "Mandakini",
     "language": [
-      "English"
-    ]
+      "English",
+      "Hindi",
+      "Tamil"
+    ],
+    "image": "assets/images/team/r-shankar.webp"
   },
   {
     "name": "Piyush Olivkar",
@@ -589,7 +674,8 @@
     "hostel": "G5 Quarters",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/piyush-olivkar.webp"
   },
   {
     "name": "Vallabh Mahajan",
@@ -600,7 +686,8 @@
     "hostel": "Godavari",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/vallabh-mahajan.webp"
   },
   {
     "name": "Vidhya Radhakrishnan",
@@ -611,7 +698,8 @@
     "hostel": "G2",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/vidhya-radhakrishnan.webp"
   },
   {
     "name": "Prachi",
@@ -621,8 +709,10 @@
     "department": "Engineering Physics",
     "hostel": "Sharavati",
     "language": [
-      "English"
-    ]
+      "English",
+      "Hindi"
+    ],
+    "image": "assets/images/team/prachi.webp"
   },
   {
     "name": "Sabarishvar S S",
@@ -633,6 +723,197 @@
     "hostel": "Godavari",
     "language": [
       "English"
-    ]
+    ],
+    "image": "assets/images/team/sabarishvar-s-s.webp"
+  },
+  {
+    "name": "Upputuri Sai Srujan",
+    "designation": "",
+    "rollNumber": "EE25M068",
+    "email": "ee25m068@smail.iitm.ac.in",
+    "department": "Electrical Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/upputuri-sai-srujan.webp"
+  },
+  {
+    "name": "Dwypayan Pal",
+    "designation": "",
+    "rollNumber": "ME25S037",
+    "email": "me25s037@smail.iitm.ac.in",
+    "department": "Mechanical Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/dwypayan-pal.webp"
+  },
+  {
+    "name": "Namburi Sujith",
+    "designation": "",
+    "rollNumber": "AE26S015",
+    "email": "ae26s015@smail.iitm.ac.in",
+    "department": "Aerospace Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/namburi-sujith.webp"
+  },
+  {
+    "name": "Mallu Gokul Nanda Reddy",
+    "designation": "",
+    "rollNumber": "PH25C022",
+    "email": "ph25c022@smail.iitm.ac.in",
+    "department": "Physics",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/mallu-gokul-nanda-reddy.webp"
+  },
+  {
+    "name": "Achuthan K",
+    "designation": "",
+    "rollNumber": "ME26M015",
+    "email": "me26m015@smail.iitm.ac.in",
+    "department": "Mechanical Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/achuthan-k.webp"
+  },
+  {
+    "name": "Shree Krishna Shrestha",
+    "designation": "",
+    "rollNumber": "CE25M821",
+    "email": "ce25m821@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/shree-krishna-shrestha.webp"
+  },
+  {
+    "name": "Ravi Anshu Tej",
+    "designation": "",
+    "rollNumber": "AM26M023",
+    "email": "am26m023@smail.iitm.ac.in",
+    "department": "Applied Mechanics and Biomedical Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/ravi-anshu-tej.webp"
+  },
+  {
+    "name": "Prajwal Pradeep Hakke",
+    "designation": "",
+    "rollNumber": "CH25B070",
+    "email": "ch25b070@smail.iitm.ac.in",
+    "department": "Chemical Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/prajwal-pradeep-hakke.webp"
+  },
+  {
+    "name": "Gowthamraj Rameshkumar",
+    "designation": "",
+    "rollNumber": "AM25B111",
+    "email": "am25b111@smail.iitm.ac.in",
+    "department": "Applied Mechanics and Biomedical Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/gowthamraj-rameshkumar.webp"
+  },
+  {
+    "name": "Lokesh Lakwal",
+    "designation": "",
+    "rollNumber": "PH25C021",
+    "email": "ph25c021@smail.iitm.ac.in",
+    "department": "Physics",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/lokesh-lakwal.webp"
+  },
+  {
+    "name": "Sakshi Sagun",
+    "designation": "",
+    "rollNumber": "DA25B041",
+    "email": "da25b041@smail.iitm.ac.in",
+    "department": "DA",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/sakshi-sagun.webp"
+  },
+  {
+    "name": "Sagar Bag",
+    "designation": "",
+    "rollNumber": "CE23B108",
+    "email": "ce23b108@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/sagar-bag.webp"
+  },
+  {
+    "name": "Polepalli Lakshmi Ganesh",
+    "designation": "",
+    "rollNumber": "ME24B141",
+    "email": "me24b141@smail.iitm.ac.in",
+    "department": "Mechanical Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/polepalli-lakshmi-ganesh.webp"
+  },
+  {
+    "name": "Vishnu Prasad C",
+    "designation": "",
+    "rollNumber": "PH25C052",
+    "email": "ph25c052@smail.iitm.ac.in",
+    "department": "Physics",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/vishnu-prasad-c.jpg"
+  },
+  {
+    "name": "Ramavathu Sai Pavan",
+    "designation": "",
+    "rollNumber": "ME26M124",
+    "email": "me26m124@smail.iitm.ac.in",
+    "department": "Mechanical Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/ramavathu-sai-pavan.jpg"
+  },
+  {
+    "name": "Yambakam Dorababu",
+    "designation": "",
+    "rollNumber": "CE25S019",
+    "email": "ce25s019@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/yambakam-dorababu.webp"
+  },
+  {
+    "name": "Kevin Kumar D",
+    "designation": "",
+    "rollNumber": "AM25B114",
+    "email": "am25b114@smail.iitm.ac.in",
+    "department": "Applied Mechanics and Biomedical Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/kevin-kumar-d.webp"
+  },
+  {
+    "name": "Md Imran Mohnavi",
+    "designation": "",
+    "rollNumber": "CE21D047",
+    "email": "ce21d047@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/md-imran-mohnavi.jpg"
+  },
+  {
+    "name": "Shaik Aareef",
+    "designation": "",
+    "rollNumber": "CE24B112",
+    "email": "ce24b112@smail.iitm.ac.in",
+    "department": "Civil Engineering",
+    "hostel": "",
+    "language": [],
+    "image": "assets/images/team/shaik-aareef.webp"
   }
 ]

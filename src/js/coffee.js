@@ -38,7 +38,7 @@
         '        <h3 class="text-2xl font-bold font-newsreader" id="coffee-modal-title">Book a Coffee with MITR</h3>',
         '      </div>',
         '      <button id="coffee-modal-close" type="button" aria-label="Close"',
-        '              class="text-outline hover:text-on-surface p-1 rounded-full">',
+        '              class="text-outline hover:text-on-surface p-2.5 -m-1.5 rounded-full">',
         '        <span class="material-symbols-outlined text-2xl">close</span>',
         '      </button>',
         '    </div>',

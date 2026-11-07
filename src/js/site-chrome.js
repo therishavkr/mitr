@@ -285,7 +285,7 @@
             '<div class="flex items-start justify-between gap-4 mb-2">' +
               '<h3 class="text-2xl font-bold text-on-surface font-newsreader" id="sos-modal-title">Call for help</h3>' +
               '<button id="sos-modal-close" type="button" aria-label="Close"' +
-              '        class="material-symbols-outlined text-on-surface-variant hover:text-primary leading-none">close</button>' +
+              '        class="material-symbols-outlined text-on-surface-variant hover:text-primary leading-none shrink-0 p-2.5 -m-2.5 rounded-full">close</button>' +
             '</div>' +
             '<p class="text-on-surface-variant mb-6">Choose the desk you need — tapping a number dials it straight away.</p>' +
             '<div class="space-y-3">' + deskRows(CAMPUS_DESKS) + '</div>' +
